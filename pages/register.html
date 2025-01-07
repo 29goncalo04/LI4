@@ -7,15 +7,22 @@
   <link rel="stylesheet" href="../assets/css/register.css"> <!-- Link para o ficheiro CSS -->
 </head>
 <body>
-  <h1><span class="line1">CREATE</span><br><span class="line2">YOUR ACCOUNT</span></h1>
+  <div class="createYourAccount">
+    <span class="line1">CREATE</span><br>
+    <span class="line2">YOUR ACCOUNT</span>
+  </div>  
   <div class="container">
     <form>
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="example@example.com" required>
-      
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="********" required>
-      
+      <div class="form-group">
+        <div class="label-container">Email</div>
+        <input type="email" id="email" placeholder="example@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <div class="label-container">Password</div>
+        <input type="password" id="password" placeholder="********" required>
+      </div>
+
       <div class="info-text">Password must have at least 9 characters</div>
       <button type="submit">Create Account</button>
     </form>

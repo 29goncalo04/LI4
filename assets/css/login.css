@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: '', sans-serif;
   background-color: #E6F7FF; /* Azul claro */
   margin: 0;
   display: flex;
@@ -9,8 +9,8 @@ body {
   height: 100vh;
 }
 
-h1 {
-  font-family: 'Georgia', serif;
+.welcome {
+  font-family: 'Joan', serif;
   font-size: 40px;
   color: #333;
   margin-bottom: 20px; /* Espaçamento abaixo do título */
