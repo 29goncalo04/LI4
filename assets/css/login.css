@@ -59,8 +59,7 @@ label {
   display: block; /* Garante que o texto fique acima */
 }
 
-input[type="email"],
-input[type="password"] {
+input[type="text"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0 20px 0; /* Espaço entre campos */
@@ -85,4 +84,20 @@ button {
 
 button:hover {
   background-color: #444;
+}
+
+.register-redirect {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.register-redirect a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.register-redirect a:hover {
+  text-decoration: underline;
 }

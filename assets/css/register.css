@@ -1,96 +1,131 @@
-/* Estilo geral */
+/* Estilo para o corpo */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #D8EEF4;
+  font-family: 'Arial', sans-serif;
+  background-color: #E6F7FF; /* Azul claro */
   margin: 0;
-  padding: 0;
-}
-
-/* Cabeçalho */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #D8EEF4;
-}
-
-.back-button {
-  font-size: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.icons .icon {
-  font-size: 24px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-/* Lista de produtos */
-.product-list {
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.product-item {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100vh;
 }
 
-.product-image {
-  width: 120px;
-  height: auto;
-  border-radius: 10px;
-  margin-right: 15px;
-}
-
-.product-info {
-  flex: 1;
-}
-
-.product-name {
-  font-size: 16px;
-  margin: 0 0 5px;
+/* Estilo do título */
+.createYourAccount {
+  font-family: 'Joan', serif;
+  text-align: center;
   color: #333;
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
 
-.product-price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #e63946;
-  margin: 0 0 10px;
+.createYourAccount .line1,
+.createYourAccount .line2 {
+  font-size: 40px;
+  animation: fadeInUp 0.5s ease-in-out;
 }
 
-.product-colors {
+/* Estilo do contêiner */
+.container {
+  text-align: left; /* Alinha o conteúdo à esquerda */
+  background-color: #F8FDFF; /* Branco suave */
+  border-radius: 15px; /* Bordas arredondadas */
+  padding: 40px; /* Espaço interno */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+  width: 350px; /* Largura do contêiner */
   display: flex;
-  gap: 5px;
-  margin-bottom: 10px;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os elementos */
+  animation: fadeIn 0.5s ease-in-out; /* Animação de entrada */
 }
 
-.color-box {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.details-button {
-  padding: 5px 10px;
-  background-color: #ccc;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo dos rótulos */
+label {
+  font-size: 21px; /* Texto maior */
+  color: #555; /* Cinza escuro */
+  margin-bottom: 5px;
+  display: block; /* Garante alinhamento acima do input */
+}
+
+/* Estilo dos campos de entrada */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px 0; /* Espaçamento entre campos */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #3498db; /* Azul claro */
+  outline: none;
+}
+
+/* Texto informativo */
+.info-text {
+  font-size: 12px; /* Texto menor */
+  color: #777; /* Cinza claro */
+  text-align: left;
+  margin-bottom: 10px; /* Reduz o espaço abaixo */
+}
+
+/* Estilo do botão */
+button {
+  width: 100%;
+  padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #000; /* Preto */
+  color: #fff;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Transição suave */
 }
 
-.details-button:hover {
-  background-color: #bbb;
+button:hover {
+  background-color: #444; /* Preto mais claro */
+}
+
+/* Redirecionamento para registro */
+.register-redirect {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.register-redirect a {
+  color: #3498db; /* Azul */
+  text-decoration: none;
+}
+
+.register-redirect a:hover {
+  text-decoration: underline; /* Sublinhado no hover */
 }

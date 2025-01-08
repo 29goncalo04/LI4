@@ -1,16 +1,13 @@
-document.querySelector("#login-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-  
-    const email = document.querySelector('input[type="email"]').value;
-    const password = document.querySelector('input[type="password"]').value;
-  
-    // Simulação de validação básica
-    if (email === "user@example.com" && password === "password123") {
-      alert("Login bem-sucedido!");
-      window.location.href = "pagina-principal.html"; // Substituir pela página principal
-    } else if(email === "admin" && password === "admin"){
-      //fazer admin a entrar na app
-    } else {
-      alert("Email ou password incorretos!");
-    }
+document.querySelector("form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+
+  const email = document.querySelector('#email').value.trim();  // Captura o valor do email
+  const password = document.querySelector('#password').value.trim();  // Captura o valor da senha
+
+  // Verifica se o email e a senha são "admin"
+  if (email === "admin" && password === "admin") {
+    window.location.href = "../../pages/admin.html";  // Redireciona para admin.html
+  } else {
+    window.location.href = "../../pages/main.html";  // Redireciona para main.html
+  }
 });

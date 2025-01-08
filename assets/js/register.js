@@ -6,9 +6,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
   
     if (password.length < 9) {
       alert("A senha precisa ter pelo menos 9 caracteres!");
-    } else {
-      alert(`Conta criada para o email: ${email}`);
-      
+    } else {      
       // Redirecionar para outra página
       window.location.href = "../../pages/login.html"; // Substituir pelo link desejado
     }
