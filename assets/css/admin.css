@@ -66,7 +66,7 @@ body {
 }
 
 .card-text:hover {
-    background-color: #666; /* Muda o fundo ao passar o rato */
-    color: #fff; /* Mantém o texto branco */
-    cursor: pointer; /* Aparece o cursor de clique */
+    background-color: #605f5f;
+    color: #fff;
+    cursor: pointer;
 }

@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F0FBFF;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    background-color: #E1F4FA;
+    padding: 15px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    margin: 8px 0;
+    margin-top: 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.scooter {
+    width: 200px;
+    height: 210px;
+    object-fit: contain;
+}
+
+.details {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    margin-left: 15px;
+}
+
+.quantity-wrapper, .price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.quantity-label, .price-label {
+    font-size: 14px;
+    color: black;
+}
+
+.quantity-value, .price-value {
+    font-size: 18px;
+    color: red;
+    margin: 5px 0;
+}
+
+.trash-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.payment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    background-color: #F0FBFF;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.back-arrow {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+.paypal, .mbway {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.totaltext {
+    font-size: 20px;
+    color: black;
+    margin: 0;
+}
+
+.totalprice {
+    font-size: 22px;
+    color: red;
+    margin: 0;
+}
