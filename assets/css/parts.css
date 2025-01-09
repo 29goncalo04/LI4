@@ -11,12 +11,19 @@ body {
 /* Cabeçalho */
 .header {
     background-color: #444444;
-    padding: 20px;
+    padding: 70px;
 }
 
 .header header {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
+    text-align: left;
+    margin-top: -55px;
+    margin-left: -50px;
+}
+
+.stock-container h1{
+    font-size: 70px;
 }
 
 /* Layout da grelha das peças */
@@ -46,10 +53,9 @@ body {
 }
 
 .part span {
-    font-size: 15px; /* Aumenta o tamanho da quantidade */
+    font-size: 20px; /* Aumenta o tamanho da quantidade */
     background-color: #444;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 5px 50px;
 }
 
 /* Ajustes de imagens individuais */
@@ -59,13 +65,13 @@ body {
 }
 
 .brakes-img {
-    width: 210px; /* Tamanho específico para os travões */
-    height: 207px;
+    width: 180px; /* Tamanho específico para os travões */
+    height: 160px;
 }
 
 .lights-img {
-    width: 215px; /* Tamanho específico para as luzes */
-    height: 215px;
+    width: 170px; /* Tamanho específico para as luzes */
+    height: 170px;
 }
 
 .tires-img {
