@@ -10,46 +10,63 @@ body {
     height: 100vh;
 }
 
+.header {
+    width: 100%; /* O cabeçalho preenche toda a largura */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #505050; /* Fundo do cabeçalho */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+}
 
 .container {
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 400px;
+    margin-top: 50px; /* Adiciona espaço abaixo do cabeçalho */
 }
 
 .card {
-    background-color: #444;
     border-radius: 10px;
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
-}
-
-.card img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-    background-color: #666;
-    border-radius: 5px;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .card-text {
-    background-color: #555;
-    width: 100%;
+    width: 100%; /* Ocupa toda a largura do cartão */
     text-align: center;
     padding: 10px;
-    font-size: 14px;
-    border-radius: 0 0 10px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #505050; /* Fundo cinzento */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-top: 10px; /* Espaçamento entre imagem e texto */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    display: inline-block; /* Garante que a área clicável seja o texto */
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    background-color: #666;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.card-text:hover {
+    background-color: #666; /* Muda o fundo ao passar o rato */
+    color: #fff; /* Mantém o texto branco */
+    cursor: pointer; /* Aparece o cursor de clique */
 }

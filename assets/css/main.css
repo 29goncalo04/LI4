@@ -15,7 +15,7 @@ body {
 }
 
 .header .cart-button {
-    margin-left: -1600px; /* Coloca o ícone do carrinho mais próximo do de encomendas */
+    margin-left: -1700px; /* Coloca o ícone do carrinho mais próximo do de encomendas */
 }
 
 .header img {
@@ -48,7 +48,7 @@ body {
 }
 
 .product-name {
-    font-size: 16px;
+    font-size: 17px;
     color: #333;
     margin: 5px 0 0;
     text-align: center; /* Alinha o nome abaixo da imagem */
@@ -57,7 +57,6 @@ body {
 .product-price {
     font-size: 18px;
     color: #940707; /* Cor do texto em vermelho */
-    font-weight: bold;
 }
 
 /* Cores dos produtos */
@@ -86,4 +85,9 @@ body {
 
 .details-button:hover {
     background-color: #bbb;
+}
+
+.color-box.selected {
+    border: 2px solid #ff0000; /* Cor para indicar que está selecionado */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
