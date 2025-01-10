@@ -28,20 +28,33 @@ document.querySelectorAll('.product-colors').forEach(group => {
     });
 });
 
+// Função para mapear RGB para nomes de cores
+function rgbToColorName(rgb) {
+    const colors = {
+        "rgb(0, 0, 0)": "Black",
+        "rgb(204, 204, 204)": "Grey",
+        // Adicione mais cores aqui, se necessário
+    };
+    return colors[rgb] || "Unknown Color";
+}
+
 document.querySelectorAll('.details-button').forEach(button => {
     button.addEventListener('click', event => {
-        // Encontra o grupo de cores correspondente ao botão clicado
-        const productDetails = event.target.closest('.product-details');
+        const productElement = event.target.closest('.product');
+        const productDetails = productElement.querySelector('.product-details');
         const colorGroup = productDetails.querySelector('.product-colors');
-        
-        // Verifica se alguma cor está selecionada
-        const selectedColor = colorGroup.querySelector('.color-box.selected');
+        const productName = productElement.querySelector('.product-name').textContent.trim();
+        const productPrice = productDetails.querySelector('.product-price').textContent.trim();
+        const productReference = productElement.getAttribute('data-reference');
+        const selectedColorBox = colorGroup.querySelector('.color-box.selected');
 
-        if (!selectedColor) {
+        if (!selectedColorBox) {
             alert("Por favor, selecione uma cor antes de ver os detalhes.");
         } else {
-            // Aqui podes definir a navegação para a página de detalhes
-            window.location.href = 'scooter.html'; // Altera para a página correta
+            const colorRgb = getComputedStyle(selectedColorBox).backgroundColor;
+            const colorName = rgbToColorName(colorRgb);
+            const url = `scooter.html?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&color=${encodeURIComponent(colorName)}&reference=${productReference}`;
+            window.location.href = url;
         }
     });
 });
