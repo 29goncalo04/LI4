@@ -67,6 +67,7 @@ body {
     height: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    cursor: pointer; /* Adiciona isto para mudar o cursor */
 }
 
 .details-button {

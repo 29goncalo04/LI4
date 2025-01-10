@@ -27,3 +27,21 @@ document.querySelectorAll('.product-colors').forEach(group => {
         }
     });
 });
+
+document.querySelectorAll('.details-button').forEach(button => {
+    button.addEventListener('click', event => {
+        // Encontra o grupo de cores correspondente ao botão clicado
+        const productDetails = event.target.closest('.product-details');
+        const colorGroup = productDetails.querySelector('.product-colors');
+        
+        // Verifica se alguma cor está selecionada
+        const selectedColor = colorGroup.querySelector('.color-box.selected');
+
+        if (!selectedColor) {
+            alert("Por favor, selecione uma cor antes de ver os detalhes.");
+        } else {
+            // Aqui podes definir a navegação para a página de detalhes
+            window.location.href = 'scooter.html'; // Altera para a página correta
+        }
+    });
+});
