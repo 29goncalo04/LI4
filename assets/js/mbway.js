@@ -6,7 +6,7 @@ if (payment) {
         // Verifica se o e-mail foi inserido
         if (!emailInput.value) {
             event.preventDefault(); // Impede o envio do formulário ou redirecionamento
-            alert("Por favor, insira o seu e-mail antes de efetuar o pagamento.");
+            alert("Por favor, insira o seu número de telemóvel antes de efetuar o pagamento.");
         } else {
             // Caso o e-mail tenha sido inserido, permite o pagamento
             alert("Pagamento efetuado com sucesso.");

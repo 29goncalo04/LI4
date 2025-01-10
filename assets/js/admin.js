@@ -1,6 +1,6 @@
 document.querySelector('#check-users').addEventListener('click', function(event) {
     event.preventDefault();
-    window.location.href = 'users.html';
+    window.location.href = 'users_list.html';
   });
 
 document.querySelector('#check-parts').addEventListener('click', function(event) {
