@@ -22,11 +22,15 @@ h2 {
 .payment-box {
     background-color: #009CDE;
     padding: 30px;
-    border-radius: 10px;
-    width: 450px;
-    text-align: center;
+    border-radius: 20px;
+    height: 200px;
+    width: 590px;
     color: white;
     margin: auto;
+    display: flex; /* Usar flexbox para centralizar */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
 }
 
 .payment-box label {
@@ -38,7 +42,7 @@ h2 {
 }
 
 .payment-box input {
-    width: 95%;
+    width: 96%;
     font-size: 19px;
     padding: 10px;
     border: none;
