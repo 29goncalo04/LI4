@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E6F4FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.paypal {
+    width: 625px;
+}
+
+h2 {
+    color: #0070BA;
+    margin: 0;
+}
+
+.payment-box {
+    background-color: #009CDE;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+.payment-box label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 23px;
+    color: black;
+}
+
+.payment-box input {
+    width: 95%;
+    font-size: 19px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.pay-button {
+    font-size: 19px;
+    width: 100%;
+    padding: 8px;
+    background-color: #2C2C2C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pay-button:hover {
+    background-color: #333;
+}

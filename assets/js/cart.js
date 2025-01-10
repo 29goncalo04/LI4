@@ -3,6 +3,8 @@ const trashIcons = document.querySelectorAll('.trash-icon');
 
 // Seleciona o ícone de seta
 const backArrow = document.querySelector('.back-arrow');
+const paypal = document.querySelector('.paypal');
+const mbway = document.querySelector('.mbway');
 
 trashIcons.forEach(icon => {
     icon.addEventListener('click', () => {
@@ -18,7 +20,20 @@ trashIcons.forEach(icon => {
 if (backArrow) {
     backArrow.addEventListener('click', () => {
         // Redireciona para uma página temporária
-        window.location.href = '../../pages/main.html'; // Troca 'temp.html' pela URL desejada mais tarde
+        window.location.href = '../../pages/main.html';
     });
 }
 
+if (paypal) {
+    paypal.addEventListener('click', () => {
+        // Redireciona para uma página temporária
+        window.location.href = '../../pages/paypal.html';
+    });
+}
+
+if (mbway) {
+    mbway.addEventListener('click', () => {
+        // Redireciona para uma página temporária
+        window.location.href = '../../pages/mbway.html';
+    });
+}
