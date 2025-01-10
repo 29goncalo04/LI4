@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0FBFF;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #E1F4FA;
+  z-index: 10;
+}
+
+.header .title {
+  font-size: 30px;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  text-align: center;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 80px; /* Espaço para o header fixo */
+  width: 100%;
+}
+
+
+
+.step-content {
+  margin: 20px 0;
+}
+
+.instruction {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 30px;
+  text-align: left;
+  margin-top: 100px; /* Mover para baixo */
+  margin-left: 100px; /* Mover para a direita */
+}
+
+.step-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.image img{
+  width: 400px;
+  height: auto;
+  margin-top: 50px; /* Mover para baixo */
+  margin-left: 150px; /* Mover para a direita */
+}
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-right: 300px;
+}
+
+.part {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.image-large img {
+  width: 250px;  /* Tamanho maior para a imagem */
+  height: auto;
+}
+
+.image-small img {
+  width: 180px;  /* Tamanho menor para a imagem */
+  height: auto;
+  margin-left: 30px;
+}
+
+.label {
+  text-align: left;
+}
+
+.part-number {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #E6E6E6;
+  padding: 5px 30px;
+}
+
+.part-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.steps {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 130px;
+  margin-left: 170px;
+}
+
+.steps .step {
+  font-size: 18px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333;
+}
+
+.steps .step.active {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
