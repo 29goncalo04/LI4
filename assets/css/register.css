@@ -1,7 +1,6 @@
-/* Estilo para o corpo */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #E6F7FF; /* Azul claro */
+  background-color: #E6F7FF;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -15,7 +14,7 @@ body {
   font-family: 'Joan', serif;
   text-align: center;
   color: #333;
-  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  margin-bottom: 20px;
 }
 
 .createYourAccount .line1,
@@ -24,21 +23,19 @@ body {
   animation: fadeInUp 0.5s ease-in-out;
 }
 
-/* Estilo do contêiner */
 .container {
-  text-align: left; /* Alinha o conteúdo à esquerda */
-  background-color: #F8FDFF; /* Branco suave */
-  border-radius: 15px; /* Bordas arredondadas */
-  padding: 40px; /* Espaço interno */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
-  width: 350px; /* Largura do contêiner */
+  text-align: left;
+  background-color: #F8FDFF;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espaçamento entre os elementos */
-  animation: fadeIn 0.5s ease-in-out; /* Animação de entrada */
+  gap: 15px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Animações */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -61,22 +58,20 @@ body {
   }
 }
 
-/* Estilo dos rótulos */
 label {
-  font-size: 21px; /* Texto maior */
-  color: #555; /* Cinza escuro */
+  font-size: 21px;
+  color: #555;
   margin-bottom: 5px;
-  display: block; /* Garante alinhamento acima do input */
+  display: block;
 }
 
-/* Estilo dos campos de entrada */
 input[type="email"],
 input[type="password"] {
   width: 100%;
   padding: 10px;
-  margin: 10px 0 20px 0; /* Espaçamento entre campos */
+  margin: 10px 0 20px 0;
   border: 1px solid #ccc;
-  border-radius: 8px; /* Bordas arredondadas */
+  border-radius: 8px;
   box-sizing: border-box;
   font-size: 14px;
   transition: border-color 0.3s ease-in-out;
@@ -84,36 +79,33 @@ input[type="password"] {
 
 input[type="email"]:focus,
 input[type="password"]:focus {
-  border-color: #3498db; /* Azul claro */
+  border-color: #3498db;
   outline: none;
 }
 
-/* Texto informativo */
 .info-text {
-  font-size: 12px; /* Texto menor */
-  color: #777; /* Cinza claro */
+  font-size: 12px;
+  color: #777;
   text-align: left;
-  margin-bottom: 10px; /* Reduz o espaço abaixo */
+  margin-bottom: 10px;
 }
 
-/* Estilo do botão */
 button {
   width: 100%;
   padding: 10px;
   border: none;
-  border-radius: 8px; /* Bordas arredondadas */
-  background-color: #000; /* Preto */
+  border-radius: 8px;
+  background-color: #000;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out; /* Transição suave */
+  transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #444; /* Preto mais claro */
+  background-color: #444;
 }
 
-/* Redirecionamento para registro */
 .register-redirect {
   margin-top: 15px;
   text-align: center;
@@ -122,10 +114,10 @@ button:hover {
 }
 
 .register-redirect a {
-  color: #3498db; /* Azul */
+  color: #3498db;
   text-decoration: none;
 }
 
 .register-redirect a:hover {
-  text-decoration: underline; /* Sublinhado no hover */
+  text-decoration: underline;
 }

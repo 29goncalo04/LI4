@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F0FBFF;
+}
+
+.modal {
+    background-color: #F0FBFF;
+    border: none; /* Remove a borda da modal */
+    border-radius: 0; /* Remove os cantos arredondados */
+    width: 80%;
+    max-width: 600px;
+    box-shadow: none; /* Remove a sombra */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: none; /* Remove a borda inferior */
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #000;
+}
+
+.close-button {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+
+.modal-content {
+    padding: 15px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #000;
+    border-bottom: 1px dashed #000;
+}
+
+table td:first-child {
+    width: 50%;
+    color: #333;
+}
+
+.modal-footer {
+    padding: 15px;
+    border-top: none; /* Remove a borda superior */
+    display: flex;
+    justify-content: center;
+    background-color: transparent; /* Remove o fundo */
+}
+
+.add-to-cart {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #E04343;
+}

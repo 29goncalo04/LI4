@@ -11,16 +11,16 @@ body {
 }
 
 .header {
-    width: 100%; /* O cabeçalho preenche toda a largura */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #505050; /* Fundo do cabeçalho */
+    padding: 25px 20px;
+    margin-left: 25px;
+    background-color: #505050;
     color: white;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 400px;
-    margin-top: 50px; /* Adiciona espaço abaixo do cabeçalho */
+    margin-top: 50px;
 }
 
 .card {
@@ -44,23 +44,23 @@ body {
 }
 
 .card-text {
-    width: 100%; /* Ocupa toda a largura do cartão */
+    width: 100%;
     text-align: center;
     padding: 10px;
     font-size: 16px;
     color: white;
-    background-color: #505050; /* Fundo cinzento */
-    border-radius: 5px; /* Bordas arredondadas */
-    margin-top: 10px; /* Espaçamento entre imagem e texto */
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    display: inline-block; /* Garante que a área clicável seja o texto */
+    background-color: #505050;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .card img {
     width: 200px;
     height: 200px;
     margin-top: 10px;
-    background-color: #666;
+    background-color: #626262;
     border-radius: 5px;
     object-fit: contain;
 }

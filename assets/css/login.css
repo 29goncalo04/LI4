@@ -1,6 +1,6 @@
 body {
   font-family: '', sans-serif;
-  background-color: #E6F7FF; /* Azul claro */
+  background-color: #E6F7FF;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -13,21 +13,21 @@ body {
   font-family: 'Joan', serif;
   font-size: 40px;
   color: #333;
-  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  margin-bottom: 20px;
   animation: fadeInUp 0.5s ease-in-out;
 }
 
 .container {
-  text-align: left; /* Alinha o conteúdo à esquerda */
+  text-align: left;
   background-color: #F8FDFF;
-  border-radius: 15px; /* Bordas arredondadas */
+  border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
-  width: 350px; /* Ajuste proporcional à imagem */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espaçamento entre elementos */
-  animation: fadeIn 0.5s ease-in-out; /* Animação de entrada */
+  gap: 15px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -56,15 +56,15 @@ label {
   font-size: 21px;
   color: #555;
   margin-bottom: 5px;
-  display: block; /* Garante que o texto fique acima */
+  display: block;
 }
 
 input[type="text"] {
   width: 100%;
   padding: 10px;
-  margin: 10px 0 20px 0; /* Espaço entre campos */
+  margin: 10px 0 20px 0;
   border: 1px solid #ccc;
-  border-radius: 8px; /* Bordas arredondadas */
+  border-radius: 8px;
   box-sizing: border-box;
   font-size: 14px;
   transition: border-color 0.3s ease-in-out;
@@ -74,12 +74,12 @@ button {
   width: 100%;
   padding: 10px;
   border: none;
-  border-radius: 8px; /* Bordas arredondadas */
+  border-radius: 8px;
   background-color: #000;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out; /* Transição suave na cor do botão */
+  transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
