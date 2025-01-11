@@ -22,6 +22,16 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.back-button {
+    position: absolute; /* Torna o botão flutuante */
+    top: 5%;
+    right: 10px; /* Alinha à direita com espaçamento */
+    transform: translateY(-50%); /* Ajusta para ficar perfeitamente centralizado */
+    width: 40px; /* Tamanho do botão */
+    height: 40px;
+    cursor: pointer;
+}
+
 .parts-container {
     display: flex;
     justify-content: space-evenly;
