@@ -73,9 +73,8 @@ steps.forEach(step => {
     document.getElementById('step-number').textContent = stepNumber; // Atualiza o número do passo
     
 
-    algo de errado nao esta certo
-    // // Atualiza a instrução
-    // document.getElementById('step-instruction').textContent = details.instruction;
+    // // Atualiza a instrução (isto tá a estragar o que tá à frentes)
+    document.getElementById('step-instruction').textContent = details.instruction;
     
     // Limpa as partes anteriores
     stepParts.innerHTML = '';
