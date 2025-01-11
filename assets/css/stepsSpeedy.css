@@ -59,7 +59,7 @@ body {
 
 
 .image img{
-  width: 400px;
+  width: 600px;
   height: auto;
   margin-top: 50px; /* Mover para baixo */
   margin-left: 150px; /* Mover para a direita */
@@ -76,22 +76,6 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-}
-
-
-.image-large img {
-  width: 250px;  /* Tamanho maior para a imagem */
-  height: auto;
-}
-
-.image-small img {
-  width: 180px;  /* Tamanho menor para a imagem */
-  height: auto;
-  margin-left: 30px;
-}
-
-.label {
-  text-align: left;
 }
 
 .part-number {
