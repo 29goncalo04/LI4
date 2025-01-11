@@ -4,15 +4,56 @@ const steps = document.querySelectorAll('.step');
 // Seleciona o elemento de imagem
 const stepImage = document.getElementById('step-image');
 
-// Imagens para cada passo
-const stepImages = {
-  1: "../assets/images/SScooter1_2_3.png",
-  2: "../assets/images/SScooter1_2_3.png",
-  3: "../assets/images/SScooter1_2_3.png",
-  4: "../assets/images/SScooter4.png",
-  5: "../assets/images/SScooter5.png",
-  6: "../assets/images/SpeedyScooter.png"
+// Seleciona o elemento onde as partes serão exibidas
+const stepParts = document.getElementById('step-parts');
+
+// Mapeamento das imagens e partes associadas a cada passo
+const stepDetails = {
+  1: {
+    image: "../assets/images/SScooter1_2_3.png",
+    parts: [
+      { img: "../assets/images/frames.png", number: 1, name: "Frame" },
+    ],
+    instruction: "Assemble the frame and prepare for motor installation."
+  },
+  2: {
+    image: "../assets/images/SScooter1_2_3.png",
+    parts: [
+      { img: "../assets/images/engine.png", number: 1, name: "Motor" },
+    ],
+    instruction: "Install the motor into the frame and secure it."
+  },
+  3: {
+    image: "../assets/images/SScooter1_2_3.png",
+    parts: [
+      { img: "../assets/images/battery.png", number: 1, name: "Battery" }
+    ],
+    instruction: "Place the battery into the designated compartment."
+  },
+  4: {
+    image: "../assets/images/SScooter4.png",
+    parts: [
+      { img: "../assets/images/controlScreens.png", number: 1, name: "Display" }
+    ],
+    instruction: "Install the display on the handlebars."
+  },
+  5: {
+    image: "../assets/images/SScooter5.png",
+    parts: [
+      { img: "../assets/images/tires.png", number: 2, name: "Wheels" },
+      { img: "../assets/images/brakes.png", number: 1, name: "Brakes" }
+    ],
+    instruction: "Attach the wheels and brakes to the scooter."
+  },
+  6: {
+    image: "../assets/images/SpeedyScooter.png",
+    parts: [
+      { img: "../assets/images/lights.png", number: 2, name: "Lights" }
+    ],
+    instruction: "Install the lights to finish the scooter assembly."
+  }
 };
+
 
 // Adiciona um evento de clique para cada step
 steps.forEach(step => {
@@ -26,7 +67,35 @@ steps.forEach(step => {
     // Pega o número do passo
     const stepNumber = step.getAttribute('data-step');
     
-    // Atualiza a imagem com base no passo
-    stepImage.src = stepImages[stepNumber];
+    // Atualiza a imagem e as partes com base no passo
+    const details = stepDetails[stepNumber];
+    stepImage.src = details.image; // Atualiza a imagem
+    document.getElementById('step-number').textContent = stepNumber; // Atualiza o número do passo
+    
+
+    algo de errado nao esta certo
+    // // Atualiza a instrução
+    // document.getElementById('step-instruction').textContent = details.instruction;
+    
+    // Limpa as partes anteriores
+    stepParts.innerHTML = '';
+    
+    // Adiciona as partes associadas ao passo
+    details.parts.forEach(part => {
+      const partElement = document.createElement('div');
+      partElement.classList.add('part');
+      
+      partElement.innerHTML = `
+        <div class="image-large">
+          <img src="${part.img}" alt="${part.name}">
+        </div>
+        <div class="label">
+          <span class="part-number">${part.number}</span>
+          <span class="part-name">${part.name}</span>
+        </div>
+      `;
+      
+      stepParts.appendChild(partElement);
+    });
   });
 });
