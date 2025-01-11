@@ -59,10 +59,10 @@ body {
 
 
 .image img{
-  width: 600px;
+  width: 1000px;
   height: auto;
   margin-top: 50px; /* Mover para baixo */
-  margin-left: 150px; /* Mover para a direita */
+  margin-left: 50px; /* Mover para a direita */
 }
 
 .parts {
@@ -76,6 +76,11 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.part img{
+  height: 400px;
+  width: 400px;
 }
 
 .part-number {
@@ -92,11 +97,12 @@ body {
 }
 
 .steps {
+  position: fixed;
   display: flex;
   justify-content: flex-start;
   gap: 10px;
   margin-top: 130px;
-  margin-left: 170px;
+  margin-left: 200px;
 }
 
 .steps .step {
