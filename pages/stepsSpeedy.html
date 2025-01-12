@@ -15,12 +15,21 @@
 
   <div class="container">
     <div class="step-content">
+      <div class="instruction">
+        Step <span id="step-number">1</span>:
+        <span id="step-instruction">Assemble the frame</span>
+      </div>
+
       <div class="step-grid">
         <div class="image">
           <img id="step-image" src="../assets/images/SpeedyScooter.png" alt="Scooter">
         </div>
+        <div class="parts" id="step-parts">
+        <!-- Parts for each step will be injected here -->
+        </div>
       </div>
     </div>
+    
     <div class="steps">
       <span class="step" data-step="1">1</span>
       <span class="step" data-step="2">2</span>
@@ -29,14 +38,6 @@
       <span class="step" data-step="5">5</span>
       <span class="step" data-step="6">6</span>
     </div>
-    
-    <div class="step-content">
-      <div class="instruction">Instruction for step <span id="step-number">1</span></div>
-      <div class="parts" id="step-parts">
-        <!-- Parts for each step will be injected here -->
-      </div>
-    </div>
-    
   </div>
   <script src="../assets/js/stepsSpeedy.js"></script> <!-- Link para o ficheiro JS -->
 </body>
