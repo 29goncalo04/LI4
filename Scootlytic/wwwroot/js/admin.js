@@ -1,17 +1,14 @@
 document.querySelector('#check-users').addEventListener('click', function(event) {
     event.preventDefault();
-    window.location.href = 'users_list.html';
+    window.location.href = '/Admin/UsersList';
   });
 
 document.querySelector('#check-parts').addEventListener('click', function(event) {
-  event.preventDefault();
-  window.location.href = 'parts.html';
+    event.preventDefault();
+    window.location.href = '/Admin/Parts'; // Redireciona para a action Parts no AdminController
 });
 
-// Seleciona o botão de voltar pelo seletor de classe
-const backButton = document.querySelector('.back-button');
 
-// Adiciona um evento de clique ao botão
-backButton.addEventListener('click', () => {
-    window.location.href = 'login.html';
+document.querySelector('.back-button').addEventListener('click', () => {
+  window.location.href = '/Account/Login'; // Redirecionamento para a página de login
 });

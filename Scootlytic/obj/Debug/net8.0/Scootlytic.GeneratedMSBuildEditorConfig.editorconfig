@@ -1,5 +1,5 @@
 is_global = true
-build_property.TargetFramework = net9.0
+build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
@@ -30,8 +30,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vYWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/goncalo/3_ano/LI4/Scootlytic/Views/Admin/users_list.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vdXNlcnNfbGlzdC5jc2h0bWw=
+[/home/goncalo/3_ano/LI4/Scootlytic/Views/Admin/parts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vcGFydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/goncalo/3_ano/LI4/Scootlytic/Views/Admin/UsersList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVXNlcnNMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/goncalo/3_ano/LI4/Scootlytic/Views/Admin/users_packages.cshtml]
@@ -52,10 +56,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/goncalo/3_ano/LI4/Scootlytic/Views/Main/main.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFpbi9tYWluLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/goncalo/3_ano/LI4/Scootlytic/Views/Parts/parts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFydHMvcGFydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/goncalo/3_ano/LI4/Scootlytic/Views/Parts/partsInstalled.cshtml]

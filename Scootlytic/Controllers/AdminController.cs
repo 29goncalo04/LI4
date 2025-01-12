@@ -9,5 +9,16 @@ namespace Scootlytic.Controllers
         {
             return View();
         }
+
+        // Action para renderizar a página de peças
+        public IActionResult Parts()
+        {
+            return View();
+        }
+
+        public IActionResult UsersList()
+        {
+            return View();
+        }
     }
 }
