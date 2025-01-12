@@ -1,0 +1,29 @@
+@{
+    Layout = null; // Defina um layout apropriado se necessário, por exemplo: "~/Views/Shared/_Layout.cshtml"
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminMode</title>
+    <link rel="stylesheet" href="../assets/css/users_list.css">
+</head>
+<body>
+    <div class="header">
+        <header>ADMIN MODE</header>
+        <img src="../assets/images/backArrow.png" alt="Back" class="back-button">
+    </div>
+    
+    <div class="search-container">
+        <label for="search-input">Enter the email of the user you want to search for</label>
+        <div class="input-wrapper">
+          <img src="../assets/images/search.png" alt="Search Logo" class="search">
+          <input type="text" id="search-input" placeholder="Search">
+        </div>
+      </div>
+    
+    <script src="../assets/js/users_list.js"></script>
+</body>
+</html>

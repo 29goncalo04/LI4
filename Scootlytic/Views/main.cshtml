@@ -1,0 +1,56 @@
+@{
+    Layout = null; // Defina um layout apropriado se necessário, por exemplo: "~/Views/Shared/_Layout.cshtml"
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scooter Store</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <div class="header">
+    <img src="../assets/images/goBack.png" alt="Back" class="back-button">
+    <img src="../assets/images/packages.png" alt="Packages" class="packages-button">
+    <img src="../assets/images/cart.png" alt="Cart" class="cart-button">
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="content">
+    <div class="product" data-reference="1">
+      <div>
+          <img src="../assets/images/SpeedyScooter.png" alt="SPEEDY Electric Scooter">
+          <div class="product-name">SPEEDY Electric Scooter</div>
+      </div>
+      <div class="product-details">
+          <span class="product-price">79,99€</span>
+          <div class="product-colors" data-group="1">
+              <span class="color-box" style="background-color: #000;"></span>
+              <span class="color-box" style="background-color: #ccc;"></span>
+          </div>
+          <button class="details-button">Show details</button>
+      </div>
+  </div>
+  
+
+  </div>
+    <div class="product" data-reference="2">
+      <div>
+          <img src="../assets/images/GlidyScooter.png" alt="SPEEDY Electric Scooter">
+          <div class="product-name">GLIDY Scooter</div>
+      </div>
+      <div class="product-details">
+          <span class="product-price">49,99€</span>
+          <div class="product-colors" data-group="2">
+              <span class="color-box" style="background-color: #000;"></span>
+              <span class="color-box" style="background-color: #ccc;"></span>
+          </div>
+          <button class="details-button">Show details</button>
+      </div>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
