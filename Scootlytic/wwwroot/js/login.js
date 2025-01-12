@@ -1,13 +1,23 @@
-document.querySelector("form").addEventListener("submit", function(event) {
+document.querySelector("form").addEventListener("submit", async function(event) {
   event.preventDefault(); // Impede o envio padrão do formulário
 
-  const email = document.querySelector('#email').value.trim();  // Captura o valor do email
-  const password = document.querySelector('#password').value.trim();  // Captura o valor da senha
+  const email = document.querySelector('#email').value.trim();  
+  const password = document.querySelector('#password').value.trim();  
 
-  // Verifica se o email e a senha são "admin"
-  if (email === "admin" && password === "admin") {
-    window.location.href = "../../pages/admin.html";  // Redireciona para admin.html
+  // Envia os dados para o servidor via POST
+  const response = await fetch('/Account/Login', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: new URLSearchParams({ email, password })
+  });
+
+  if (response.redirected) {
+      // Redireciona o utilizador para a página que o servidor definiu
+      window.location.href = response.url;
   } else {
-    window.location.href = "../../pages/main.html";  // Redireciona para main.html
+      // Atualiza a página para mostrar a mensagem de erro (se existir)
+      document.body.innerHTML = await response.text();
   }
 });

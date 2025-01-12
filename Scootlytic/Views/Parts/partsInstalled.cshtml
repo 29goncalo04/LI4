@@ -1,0 +1,60 @@
+@{
+    Layout = null; // Defina um layout apropriado se necessário, por exemplo: "~/Views/Shared/_Layout.cshtml"
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parts List</title>
+    <link rel="stylesheet" href="/css/partsInstalled.css">
+</head>
+<body>
+
+    <header class="header">
+        <h2 class="title">PARTS</h2>
+        <img src="/images/backArrow.png" alt="Back" class="back-button">
+    </header>
+
+    <div class="parts-container">
+        <div class="column">
+            <h3>Installed</h3>
+            <div class="part">
+                <img src="/images/battery.png" alt="Installed Part 1">
+                <span class="quantity">1</span>
+            </div>
+            <div class="part">
+                <img src="/images/brakes.png" alt="Installed Part 2">
+                <span class="quantity">1</span>
+            </div>
+            <div class="part">
+                <img src="/images/controlScreens.png" alt="Installed Part 3">
+                <span class="quantity">1</span>
+            </div>
+            <div class="part">
+                <img src="/images/engine.png" alt="Installed Part 4">
+                <span class="quantity">1</span>
+            </div>
+            <div class="part">
+                <img src="/images/lights.png" alt="Installed Part 5">
+                <span class="quantity">2</span>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>To Install</h3>
+            <div class="part">
+                <img src="/images/frames.png" alt="To Install Part">
+                <span class="quantity">1</span>
+            </div>
+            <div class="part">
+                <img src="/images/tires.png" alt="To Install Part">
+                <span class="quantity">2</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/partsInstalled.js"></script>
+</body>
+</html>

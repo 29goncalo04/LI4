@@ -1,0 +1,36 @@
+@{
+    Layout = null; // Pode definir um layout apropriado se necessário
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css"> <!-- Link para o ficheiro CSS -->
+</head>
+<body>
+    <div class="welcome">WELCOME</div>
+    <div class="container">
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <p style="color: red;">@ViewBag.ErrorMessage</p>
+        }
+
+        <form method="post" asp-controller="Account" asp-action="Login">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" required>
+            
+            <button type="submit">Sign In</button>
+        </form>
+
+        <div class="register-redirect">
+            <p>If you don't have an account, <a href="@Url.Action("Register", "Account")">click here to register</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

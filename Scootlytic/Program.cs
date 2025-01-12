@@ -16,14 +16,18 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.UseAuthorization();
+// Serve arquivos estáticos (CSS, JS, imagens) da pasta wwwroot
+app.UseStaticFiles();
 
-app.MapStaticAssets();
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Account}/{action=Login}/{id?}");
+
+app.MapControllerRoute(
+    name: "admin",
+    pattern: "Admin/{controller=Admin}/{action=Admin}/{id?}");
 
 
 app.Run();

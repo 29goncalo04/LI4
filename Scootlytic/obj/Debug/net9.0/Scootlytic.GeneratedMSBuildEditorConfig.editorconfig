@@ -20,54 +20,54 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/admin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvYWRtaW4uY3NodG1s
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Account/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9sb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/cart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvY2FydC5jc2h0bWw=
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Account/register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9yZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvbG9naW4uY3NodG1s
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Admin/admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vYWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/main.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvbWFpbi5jc2h0bWw=
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Admin/users_list.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vdXNlcnNfbGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/mbway.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvbWJ3YXkuY3NodG1s
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Admin/users_packages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vdXNlcnNfcGFja2FnZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/parts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvcGFydHMuY3NodG1s
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Cart/cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9jYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/partsInstalled.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvcGFydHNJbnN0YWxsZWQuY3NodG1s
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Cart/mbway.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9tYndheS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/paypal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvcGF5cGFsLmNzaHRtbA==
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Cart/paypal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9wYXlwYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvcmVnaXN0ZXIuY3NodG1s
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Main/main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFpbi9tYWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/scooter.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3Mvc2Nvb3Rlci5jc2h0bWw=
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Parts/parts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFydHMvcGFydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/stepsSpeedy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3Mvc3RlcHNTcGVlZHkuY3NodG1s
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Parts/partsInstalled.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFydHMvcGFydHNJbnN0YWxsZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/users_list.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvdXNlcnNfbGlzdC5jc2h0bWw=
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Scooter/scooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2Nvb3Rlci9zY29vdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/users_packages.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvdXNlcnNfcGFja2FnZXMuY3NodG1s
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Scooter/stepsSpeedy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2Nvb3Rlci9zdGVwc1NwZWVkeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
