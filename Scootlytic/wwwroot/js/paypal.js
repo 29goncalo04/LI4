@@ -10,7 +10,7 @@ if (payment) {
         } else {
             // Caso o e-mail tenha sido inserido, permite o pagamento
             alert("Pagamento efetuado com sucesso.");
-            window.location.href = '../../pages/main.html';
+            window.location.href = '/Main/Main';
         }
     });
 }

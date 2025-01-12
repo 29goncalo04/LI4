@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const backButton = document.querySelector('.close-button');
 if (backButton) {
     backButton.addEventListener('click', () => {
-        window.location.href = 'main.html';
+        window.location.href = '/Main/Main';
     });
 }
 

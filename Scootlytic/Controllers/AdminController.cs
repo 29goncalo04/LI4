@@ -20,5 +20,10 @@ namespace Scootlytic.Controllers
         {
             return View();
         }
+
+        public IActionResult UsersPackages()
+        {
+            return View();
+        }
     }
 }

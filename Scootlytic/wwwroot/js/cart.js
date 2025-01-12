@@ -20,20 +20,20 @@ trashIcons.forEach(icon => {
 if (backArrow) {
     backArrow.addEventListener('click', () => {
         // Redireciona para uma página temporária
-        window.location.href = '../../pages/main.html';
+        window.location.href = '/Main/Main';
     });
 }
 
 if (paypal) {
     paypal.addEventListener('click', () => {
         // Redireciona para uma página temporária
-        window.location.href = '../../pages/paypal.html';
+        window.location.href = '/Cart/Paypal';
     });
 }
 
 if (mbway) {
     mbway.addEventListener('click', () => {
         // Redireciona para uma página temporária
-        window.location.href = '../../pages/mbway.html';
+        window.location.href = '/Cart/Mbway';
     });
 }

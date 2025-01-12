@@ -6,20 +6,20 @@ const packagesButton = document.querySelector('.packages-button');
 // Evento para redirecionar ao clicar no carrinho
 if (cartButton) {
     cartButton.addEventListener('click', () => {
-        window.location.href = 'cart.html';
+        window.location.href = '/Cart/Cart';
     });
 }
 
 // Evento para redirecionar ao clicar na seta de voltar
 if (backButton) {
     backButton.addEventListener('click', () => {
-        window.location.href = 'login.html'; 
+        window.location.href = '/Account/Login'; 
     });
 }
 
 if (packagesButton) {
     packagesButton.addEventListener('click', () => {
-        window.location.href = 'users_packages.html'; 
+        window.location.href = '/Admin/UsersPackages'; 
     });
 }
 
@@ -60,8 +60,10 @@ document.querySelectorAll('.details-button').forEach(button => {
         } else {
             const colorRgb = getComputedStyle(selectedColorBox).backgroundColor;
             const colorName = rgbToColorName(colorRgb);
-            const url = `scooter.html?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&color=${encodeURIComponent(colorName)}&reference=${productReference}`;
-            window.location.href = url;
+            // Aqui, alteramos para usar o roteamento ASP.NET
+            const url = `/Scooter/Scooter?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&color=${encodeURIComponent(colorName)}&reference=${productReference}`;
+            window.location.href = url;  // Redirecionamento para o ASP.NET Controller
         }
     });
 });
+
