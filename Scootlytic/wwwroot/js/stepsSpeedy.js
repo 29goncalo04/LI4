@@ -10,45 +10,45 @@ const stepParts = document.getElementById('step-parts');
 // Mapeamento das imagens e partes associadas a cada passo
 const stepDetails = {
   1: {
-    image: "../assets/images/SScooter1_2_3.png",
+    image: "/images/SScooter1_2_3.png",
     parts: [
-      { img: "../assets/images/frames.png", number: 1, name: "Frame" },
+      { img: "/images/frames.png", number: 1, name: "Frame" },
     ],
     instruction: "Assemble the frame and prepare for motor installation."
   },
   2: {
-    image: "../assets/images/SScooter1_2_3.png",
+    image: "/images/SScooter1_2_3.png",
     parts: [
-      { img: "../assets/images/engine.png", number: 1, name: "Motor" },
+      { img: "/images/engine.png", number: 1, name: "Motor" },
     ],
     instruction: "Install the motor into the frame and secure it."
   },
   3: {
-    image: "../assets/images/SScooter1_2_3.png",
+    image: "/images/SScooter1_2_3.png",
     parts: [
-      { img: "../assets/images/battery.png", number: 1, name: "Battery" }
+      { img: "/images/battery.png", number: 1, name: "Battery" }
     ],
     instruction: "Place the battery into the designated compartment."
   },
   4: {
-    image: "../assets/images/SScooter4.png",
+    image: "/images/SScooter4.png",
     parts: [
-      { img: "../assets/images/controlScreens.png", number: 1, name: "Display" }
+      { img: "/images/controlScreens.png", number: 1, name: "Display" }
     ],
     instruction: "Install the display on the handlebars."
   },
   5: {
-    image: "../assets/images/SScooter5.png",
+    image: "/images/SScooter5.png",
     parts: [
-      { img: "../assets/images/tires.png", number: 2, name: "Wheels" },
-      { img: "../assets/images/brakes.png", number: 1, name: "Brakes" }
+      { img: "/images/tires.png", number: 2, name: "Wheels" },
+      { img: "/images/brakes.png", number: 1, name: "Brakes" }
     ],
     instruction: "Attach the wheels and brakes to the scooter."
   },
   6: {
-    image: "../assets/images/SpeedyScooter.png",
+    image: "/images/SpeedyScooter.png",
     parts: [
-      { img: "../assets/images/lights.png", number: 2, name: "Lights" }
+      { img: "/images/lights.png", number: 2, name: "Lights" }
     ],
     instruction: "Install the lights to finish the scooter assembly."
   }

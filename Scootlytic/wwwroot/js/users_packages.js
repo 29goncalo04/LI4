@@ -1,11 +1,11 @@
 // Função para redirecionar para a página do modelo Speedy
 function goToSpeedyPage() {
-    window.location.href = '../../pages/stepsSpeedy.html';
+    window.location.href = '/Scooter/StepsSpeedy';
 }
 
 // Função para redirecionar para a página do modelo Glidy
 function goToGlidyPage() {
-    window.location.href = '../../pages/stepsGlidy.html';
+    window.location.href = '/Scooter/StepsGlidy';
 }
 
 
@@ -14,5 +14,5 @@ const backButton = document.querySelector('.back-button');
 
 // Adiciona um evento de clique ao botão
 backButton.addEventListener('click', () => {
-    window.location.href = 'main.html';
+    window.location.href = '/Main/Main';
 });

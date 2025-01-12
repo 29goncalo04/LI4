@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets/css/users_packages.css"
     },
     {
+      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/favicon (Copy).ico",
+      "PackagePath": "staticwebassets/favicon (Copy).ico"
+    },
+    {
       "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e2ztWLrhblzw4iIVaFflYkvy93m3lI0ERWcoHSFqbxM=",
+  "Hash": "6/pGTBgB2jBJe9h3IdiGPGjEqH601pXLX305ybT868o=",
   "Source": "Scootlytic",
   "BasePath": "_content/Scootlytic",
   "Mode": "Default",
@@ -262,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/users_packages.css"
+    },
+    {
+      "Identity": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/favicon (Copy).ico",
+      "SourceId": "Scootlytic",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/",
+      "BasePath": "_content/Scootlytic",
+      "RelativePath": "favicon (Copy).ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon (Copy).ico"
     },
     {
       "Identity": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/favicon.ico",

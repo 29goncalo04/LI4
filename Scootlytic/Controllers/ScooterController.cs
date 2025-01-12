@@ -9,5 +9,13 @@ namespace Scootlytic.Scooter
         {
             return View();
         }
+        public IActionResult StepsSpeedy()
+        {
+            return View();
+        }
+        public IActionResult StepsGlidy()
+        {
+            return View();
+        }
     }
 }
