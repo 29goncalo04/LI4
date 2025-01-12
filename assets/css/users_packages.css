@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0FBFF;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.back-button {
+    width: 50px;  /* Ajuste o valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    cursor: pointer;
+    position: absolute;  /* Permite mover a imagem livremente */
+    top: 40px;  /* Distância de 20px a partir do fundo da página */
+    right: 20px;   /* Distância de 20px a partir da borda direita da página */
+}
+
+
+.order {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 10px;
+}
+
+.package-box, .price-box, .contents-box, .status-box, .delivery-box {
+    background-color: #F0FBFF;
+    padding: 30px;  /* Aumenta o espaçamento interno das caixas */
+    margin: 2px;    /* Diminui a margem entre as caixas */
+    flex: 2;        /* Faz as caixas ocuparem mais espaço, tornando-as maiores */
+    text-align: center;
+    font-size: 25px;
+}
+
+
+.package-box {
+    background-color: #D9D9D9;
+}
+
+.price-box {
+    background-color: #D9D9D9;
+}
+
+.contents-box {
+    background-color: #D9D9D9;
+    flex: 5;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;  /* Organiza os conteúdos verticalmente */
+    align-items: center;     /* Centraliza a palavra "Contents" */
+    font-size: 20px;
+}
+
+.contents-title {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 10px;  /* Espaço entre o título e os conteúdos */
+    text-align: center;
+}
+
+.contents {
+    display: flex;
+    width: 100%;
+    font-size: 25px;
+    align-items: center;
+}
+
+.contents .speedy {
+    text-align: left;
+}
+
+.contents .glidy {
+    text-align: right;
+    margin-left: auto; /* Garante que GLIDY fique sempre à direita */
+}
+
+/* Esconde SPEEDY, mas mantém o espaço ocupado */
+.contents .hidden {
+    visibility: hidden;
+}
+
+
+
+.status-box {
+    background-color: #D9D9D9;
+}
+
+.delivery-box {
+    background-color: #D9D9D9;
+}
+
+.order-details table {
+    width: 25%;
+    height: 70px;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto; 
+    margin-left: 37%; 
+    margin-right: auto;
+    background-color: #EDEDED;
+    margin-top: -12px;
+}
+
+.order-details table td:first-child {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.order-details table td:first-child:hover {
+    color: #007BFF;
+}

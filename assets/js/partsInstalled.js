@@ -3,5 +3,5 @@ const backButton = document.querySelector('.back-button');
 
 // Adiciona um evento de clique ao botão
 backButton.addEventListener('click', () => {
-    window.location.href = 'users_packages.html';
+    window.location.href = 'stepsSpeedy.html';
 });

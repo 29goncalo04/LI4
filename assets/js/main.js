@@ -1,6 +1,7 @@
 // Seleciona os botões no cabeçalho
 const cartButton = document.querySelector('.cart-button');
 const backButton = document.querySelector('.back-button');
+const packagesButton = document.querySelector('.packages-button');
 
 // Evento para redirecionar ao clicar no carrinho
 if (cartButton) {
@@ -13,6 +14,12 @@ if (cartButton) {
 if (backButton) {
     backButton.addEventListener('click', () => {
         window.location.href = 'login.html'; 
+    });
+}
+
+if (packagesButton) {
+    packagesButton.addEventListener('click', () => {
+        window.location.href = 'users_packages.html'; 
     });
 }
 
