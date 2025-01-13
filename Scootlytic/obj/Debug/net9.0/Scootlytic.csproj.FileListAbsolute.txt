@@ -393,7 +393,6 @@
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/br92phkjty-tt3atzd2m1.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/tk9iwyqj1r-oo893jl0u6.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/9fwjpkuqn5-sc0grh64h2.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/hilzymtrvp-wnknj01dcf.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/8b8yfrv0mm-ird1qh7r0g.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/64aj41xa7m-61n19gt1b8.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/o15jig3a5o-3gjdnr4jt7.gz
@@ -407,7 +406,6 @@
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/o6akur53n8-4f1jutmxja.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/2xd4p9iwix-1jz08h5i2d.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/vett1c3o6q-u5cve6q99a.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/vsy79z0y3c-jnc5vbqifq.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/q0uqojkblk-rl7ulwqor2.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/cusenz6iq2-bqjiyaj88i.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/xvzh3pmsnc-c2jlpeoesf.gz
@@ -483,3 +481,5 @@
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/Scootlytic.pdb
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/Scootlytic.genruntimeconfig.cache
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/ref/Scootlytic.dll
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/hilzymtrvp-jhyvm3867o.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/vsy79z0y3c-yhfbkurn66.gz
