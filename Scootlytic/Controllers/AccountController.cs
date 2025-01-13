@@ -25,6 +25,11 @@ namespace Scootlytic.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(string email, string password)
         {
+            // Se o usuário for administrador
+            if (email == "admin" && password == "admin")
+            {
+                return RedirectToAction("Admin", "Admin"); // Página de administração, caso seja o admin
+            }
             // Verifica se o usuário existe na base de dados
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
@@ -36,11 +41,6 @@ namespace Scootlytic.Controllers
                 return View(); // Retorna à página de login com uma mensagem de erro
             }
 
-            // Se o usuário for encontrado, verifica o papel ou redireciona
-            if (user.Email == "admin" && user.Password == password)
-            {
-                return RedirectToAction("Admin", "Admin"); // Página de administração, caso seja o admin
-            }
 
             // Caso contrário, redireciona para a página principal (Main)
             return RedirectToAction("Main", "Main");
