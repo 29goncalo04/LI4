@@ -1,9 +1,32 @@
+using Microsoft.EntityFrameworkCore;
+using Scootlytic.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+// Configurar a string de conexão com a base de dados (Azure ou local)
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+
+// Aplicar migrações automaticamente ao iniciar a aplicação, caso esteja em desenvolvimento
+if (app.Environment.IsDevelopment())
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        context.Database.Migrate();  // Aplica automaticamente as migrações pendentes
+    }
+}
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
