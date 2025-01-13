@@ -5,13 +5,15 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Scootlytic.Models;
+using Scootlytic.Data;
+
 
 #nullable disable
 
 namespace Scootlytic.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250113134637_UsersTable")]
+    [Migration("UsersTable")]
     partial class UsersTable
     {
         /// <inheritdoc />
@@ -35,7 +37,7 @@ namespace Scootlytic.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

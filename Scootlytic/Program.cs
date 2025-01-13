@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Scootlytic.Models;
+using Scootlytic.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Scootlytic.Models;
 
-namespace Scootlytic.Models  // Certifica-te de que o namespace está correto
+namespace Scootlytic.Data  // Certifica-te de que o namespace está correto
 {
     public class ApplicationDbContext : DbContext
     {
