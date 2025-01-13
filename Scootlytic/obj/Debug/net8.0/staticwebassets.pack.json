@@ -1,444 +1,444 @@
 {
   "Files": [
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/admin.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/admin.css",
       "PackagePath": "staticwebassets/css/admin.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/cart.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/cart.css",
       "PackagePath": "staticwebassets/css/cart.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/login.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/login.css",
       "PackagePath": "staticwebassets/css/login.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/main.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/main.css",
       "PackagePath": "staticwebassets/css/main.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/mbway.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/mbway.css",
       "PackagePath": "staticwebassets/css/mbway.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/parts.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/parts.css",
       "PackagePath": "staticwebassets/css/parts.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/partsInstalled.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/partsInstalled.css",
       "PackagePath": "staticwebassets/css/partsInstalled.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/paypal.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/paypal.css",
       "PackagePath": "staticwebassets/css/paypal.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/register.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/register.css",
       "PackagePath": "staticwebassets/css/register.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/scooter.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/scooter.css",
       "PackagePath": "staticwebassets/css/scooter.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/stepsSpeedy.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/stepsSpeedy.css",
       "PackagePath": "staticwebassets/css/stepsSpeedy.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/users_list.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/users_list.css",
       "PackagePath": "staticwebassets/css/users_list.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/users_packages.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/css/users_packages.css",
       "PackagePath": "staticwebassets/css/users_packages.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/favicon (Copy).ico",
-      "PackagePath": "staticwebassets/favicon (Copy).ico"
-    },
-    {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/favicon.ico",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/GlidyScooter.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/GlidyScooter.png",
       "PackagePath": "staticwebassets/images/GlidyScooter.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/SScooter1_2_3.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/SScooter1_2_3.png",
       "PackagePath": "staticwebassets/images/SScooter1_2_3.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/SScooter4.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/SScooter4.png",
       "PackagePath": "staticwebassets/images/SScooter4.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/SScooter5.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/SScooter5.png",
       "PackagePath": "staticwebassets/images/SScooter5.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/SpeedyScooter.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/SpeedyScooter.png",
       "PackagePath": "staticwebassets/images/SpeedyScooter.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/backArrow.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/backArrow.png",
       "PackagePath": "staticwebassets/images/backArrow.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/battery.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/battery.png",
       "PackagePath": "staticwebassets/images/battery.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/brakes.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/brakes.png",
       "PackagePath": "staticwebassets/images/brakes.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/cart.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/cart.png",
       "PackagePath": "staticwebassets/images/cart.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/controlScreens.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/controlScreens.png",
       "PackagePath": "staticwebassets/images/controlScreens.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/engine.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/engine.png",
       "PackagePath": "staticwebassets/images/engine.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/frames.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/frames.png",
       "PackagePath": "staticwebassets/images/frames.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/goBack.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/goBack.png",
       "PackagePath": "staticwebassets/images/goBack.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/lights.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/lights.png",
       "PackagePath": "staticwebassets/images/lights.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/lixo.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/lixo.png",
       "PackagePath": "staticwebassets/images/lixo.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/mbway.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/mbway.png",
       "PackagePath": "staticwebassets/images/mbway.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/packages.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/packages.png",
       "PackagePath": "staticwebassets/images/packages.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/parts.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/parts.png",
       "PackagePath": "staticwebassets/images/parts.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/paypal.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/paypal.png",
       "PackagePath": "staticwebassets/images/paypal.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/search.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/search.png",
       "PackagePath": "staticwebassets/images/search.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/tires.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/tires.png",
       "PackagePath": "staticwebassets/images/tires.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/images/usersList.png",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/images/usersList.png",
       "PackagePath": "staticwebassets/images/usersList.png"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/admin.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/admin.js",
       "PackagePath": "staticwebassets/js/admin.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/cart.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/cart.js",
       "PackagePath": "staticwebassets/js/cart.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/login.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/login.js",
       "PackagePath": "staticwebassets/js/login.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/main.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/main.js",
       "PackagePath": "staticwebassets/js/main.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/mbway.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/mbway.js",
       "PackagePath": "staticwebassets/js/mbway.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/parts.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/parts.js",
       "PackagePath": "staticwebassets/js/parts.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/partsInstalled.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/partsInstalled.js",
       "PackagePath": "staticwebassets/js/partsInstalled.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/paypal.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/paypal.js",
       "PackagePath": "staticwebassets/js/paypal.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/register.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/register.js",
       "PackagePath": "staticwebassets/js/register.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/scooter.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/scooter.js",
       "PackagePath": "staticwebassets/js/scooter.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/stepsSpeedy.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/stepsSpeedy.js",
       "PackagePath": "staticwebassets/js/stepsSpeedy.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/users_list.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/users_list.js",
       "PackagePath": "staticwebassets/js/users_list.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/users_packages.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/js/users_packages.js",
       "PackagePath": "staticwebassets/js/users_packages.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/LICENSE",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery-validation/LICENSE.md",
       "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery/LICENSE.txt",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery/dist/jquery.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery/dist/jquery.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery/dist/jquery.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery/dist/jquery.slim.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery/dist/jquery.slim.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery/dist/jquery.slim.min.js",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery/dist/jquery.slim.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.js"
     },
     {
-      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/jquery/dist/jquery.slim.min.map",
+      "Id": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/wwwroot/lib/jquery/dist/jquery.slim.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Scootlytic.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Scootlytic.Microsoft.AspNetCore.StaticWebAssets.props",
