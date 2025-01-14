@@ -46,7 +46,7 @@ namespace Scootlytic.Controllers
                 return Json(new List<string>());
             }
         
-            // Buscar os usuários que começam com o texto da pesquisa (ignorando maiúsculas/minúsculas)
+            // Buscar os utilizadores que começam com o texto da pesquisa (ignorando maiúsculas/minúsculas)
             var users = await _context.Users
                 .Where(u => u.Email.StartsWith(query))
                 .Select(u => u.Email) // Apenas o email será retornado

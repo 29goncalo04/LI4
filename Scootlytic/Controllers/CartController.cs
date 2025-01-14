@@ -4,7 +4,6 @@ namespace Scootlytic.Cart
 {
     public class CartController : Controller
     {
-        // Método para renderizar a página de Login
         public IActionResult Cart()
         {
             return View();

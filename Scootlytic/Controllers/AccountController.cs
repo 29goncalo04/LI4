@@ -25,19 +25,19 @@ namespace Scootlytic.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(string email, string password)
         {
-            // Se o usuário for administrador
+            // Se o utilizador for administrador
             if (email == "admin" && password == "admin")
             {
                 return RedirectToAction("Admin", "Admin"); // Página de administração, caso seja o admin
             }
-            // Verifica se o usuário existe na base de dados
+            // Verifica se o utilizador existe na base de dados
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
 
-            // Se o usuário não for encontrado ou a senha estiver errada
+            // Se o utilizador não for encontrado ou a senha estiver errada
             if (user == null)
             {
-                ViewBag.ErrorMessage = "Usuário ou senha inválidos.";
+                ViewBag.ErrorMessage = "Utilizador ou senha inválidos.";
                 return View(); // Retorna à página de login com uma mensagem de erro
             }
 
@@ -74,12 +74,12 @@ namespace Scootlytic.Controllers
                 CartId = newCarrinho.IdCarrinho
             };
 
-            // Adiciona o novo usuário na base de dados
+            // Adiciona o novo utilizador na base de dados
             _context.Users.Add(newUser);
 
             await _context.SaveChangesAsync();
         
-            // Lógica para criar o usuário (substitua com a lógica de base de dados real)
+            // Lógica para criar o utilizador (substitua com a lógica de base de dados real)
             ViewBag.SuccessMessage = "Registration successful! You can now log in.";
             
             // Redireciona para a página de login após o sucesso
