@@ -27,12 +27,12 @@ namespace Scootlytic.Migrations
                     b.Property<int>("IdCarrinho")
                         .HasColumnType("int");
 
-                    b.Property<string>("ModeloTrotinete")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IdTrotinete")
+                        .HasColumnType("int");
 
-                    b.HasKey("IdCarrinho", "ModeloTrotinete");
+                    b.HasKey("IdCarrinho", "IdTrotinete");
 
-                    b.HasIndex("ModeloTrotinete");
+                    b.HasIndex("IdTrotinete");
 
                     b.ToTable("Adicionada");
                 });
@@ -94,12 +94,12 @@ namespace Scootlytic.Migrations
                     b.Property<string>("EmailUtilizador")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("ModeloTrotinete")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IdTrotinete")
+                        .HasColumnType("int");
 
-                    b.HasKey("EmailUtilizador", "ModeloTrotinete");
+                    b.HasKey("EmailUtilizador", "IdTrotinete");
 
-                    b.HasIndex("ModeloTrotinete");
+                    b.HasIndex("IdTrotinete");
 
                     b.ToTable("Escolhe");
                 });
@@ -143,13 +143,13 @@ namespace Scootlytic.Migrations
 
             modelBuilder.Entity("Scootlytic.Models.Possui", b =>
                 {
-                    b.Property<string>("ModeloTrotinete")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IdTrotinete")
+                        .HasColumnType("int");
 
                     b.Property<int>("IdPasso")
                         .HasColumnType("int");
 
-                    b.HasKey("ModeloTrotinete", "IdPasso");
+                    b.HasKey("IdTrotinete", "IdPasso");
 
                     b.HasIndex("IdPasso");
 
@@ -158,8 +158,11 @@ namespace Scootlytic.Migrations
 
             modelBuilder.Entity("Scootlytic.Models.Trotinete", b =>
                 {
-                    b.Property<string>("Modelo")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IdTrotinete")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdTrotinete"));
 
                     b.Property<string>("Cor")
                         .IsRequired()
@@ -169,10 +172,14 @@ namespace Scootlytic.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Modelo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("NumeroEncomenda")
                         .HasColumnType("int");
 
-                    b.HasKey("Modelo");
+                    b.HasKey("IdTrotinete");
 
                     b.HasIndex("NumeroEncomenda");
 
@@ -206,7 +213,7 @@ namespace Scootlytic.Migrations
 
                     b.HasOne("Scootlytic.Models.Trotinete", "Trotinete")
                         .WithMany()
-                        .HasForeignKey("ModeloTrotinete")
+                        .HasForeignKey("IdTrotinete")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -247,7 +254,7 @@ namespace Scootlytic.Migrations
 
                     b.HasOne("Scootlytic.Models.Trotinete", "Trotinete")
                         .WithMany()
-                        .HasForeignKey("ModeloTrotinete")
+                        .HasForeignKey("IdTrotinete")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -277,7 +284,7 @@ namespace Scootlytic.Migrations
 
                     b.HasOne("Scootlytic.Models.Trotinete", "Trotinete")
                         .WithMany()
-                        .HasForeignKey("ModeloTrotinete")
+                        .HasForeignKey("IdTrotinete")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

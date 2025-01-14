@@ -102,14 +102,16 @@ namespace Scootlytic.Migrations
                 name: "Trotinetes",
                 columns: table => new
                 {
-                    Modelo = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IdTrotinete = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Modelo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     InformacaoTecnica = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cor = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NumeroEncomenda = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Trotinetes", x => x.Modelo);
+                    table.PrimaryKey("PK_Trotinetes", x => x.IdTrotinete);
                     table.ForeignKey(
                         name: "FK_Trotinetes_Encomendas_NumeroEncomenda",
                         column: x => x.NumeroEncomenda,
@@ -123,11 +125,11 @@ namespace Scootlytic.Migrations
                 columns: table => new
                 {
                     IdCarrinho = table.Column<int>(type: "int", nullable: false),
-                    ModeloTrotinete = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdTrotinete = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Adicionada", x => new { x.IdCarrinho, x.ModeloTrotinete });
+                    table.PrimaryKey("PK_Adicionada", x => new { x.IdCarrinho, x.IdTrotinete });
                     table.ForeignKey(
                         name: "FK_Adicionada_Carrinhos_IdCarrinho",
                         column: x => x.IdCarrinho,
@@ -135,10 +137,10 @@ namespace Scootlytic.Migrations
                         principalColumn: "IdCarrinho",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Adicionada_Trotinetes_ModeloTrotinete",
-                        column: x => x.ModeloTrotinete,
+                        name: "FK_Adicionada_Trotinetes_IdTrotinete",
+                        column: x => x.IdTrotinete,
                         principalTable: "Trotinetes",
-                        principalColumn: "Modelo",
+                        principalColumn: "IdTrotinete",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -147,16 +149,16 @@ namespace Scootlytic.Migrations
                 columns: table => new
                 {
                     EmailUtilizador = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ModeloTrotinete = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    IdTrotinete = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Escolhe", x => new { x.EmailUtilizador, x.ModeloTrotinete });
+                    table.PrimaryKey("PK_Escolhe", x => new { x.EmailUtilizador, x.IdTrotinete });
                     table.ForeignKey(
-                        name: "FK_Escolhe_Trotinetes_ModeloTrotinete",
-                        column: x => x.ModeloTrotinete,
+                        name: "FK_Escolhe_Trotinetes_IdTrotinete",
+                        column: x => x.IdTrotinete,
                         principalTable: "Trotinetes",
-                        principalColumn: "Modelo",
+                        principalColumn: "IdTrotinete",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Escolhe_Users_EmailUtilizador",
@@ -170,12 +172,12 @@ namespace Scootlytic.Migrations
                 name: "Possui",
                 columns: table => new
                 {
-                    ModeloTrotinete = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IdTrotinete = table.Column<int>(type: "int", nullable: false),
                     IdPasso = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Possui", x => new { x.ModeloTrotinete, x.IdPasso });
+                    table.PrimaryKey("PK_Possui", x => new { x.IdTrotinete, x.IdPasso });
                     table.ForeignKey(
                         name: "FK_Possui_Passos_IdPasso",
                         column: x => x.IdPasso,
@@ -183,17 +185,17 @@ namespace Scootlytic.Migrations
                         principalColumn: "idPasso",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Possui_Trotinetes_ModeloTrotinete",
-                        column: x => x.ModeloTrotinete,
+                        name: "FK_Possui_Trotinetes_IdTrotinete",
+                        column: x => x.IdTrotinete,
                         principalTable: "Trotinetes",
-                        principalColumn: "Modelo",
+                        principalColumn: "IdTrotinete",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Adicionada_ModeloTrotinete",
+                name: "IX_Adicionada_IdTrotinete",
                 table: "Adicionada",
-                column: "ModeloTrotinete");
+                column: "IdTrotinete");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Carrinhos_EmailUtilizador",
@@ -207,9 +209,9 @@ namespace Scootlytic.Migrations
                 column: "EmailUtilizador");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Escolhe_ModeloTrotinete",
+                name: "IX_Escolhe_IdTrotinete",
                 table: "Escolhe",
-                column: "ModeloTrotinete");
+                column: "IdTrotinete");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Passos_ReferenciaPeca",

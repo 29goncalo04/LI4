@@ -45,7 +45,7 @@ namespace Scootlytic.Data
 
             // Relacionamento entre Escolhe, User e Trotinete
             modelBuilder.Entity<Escolhe>()
-                .HasKey(e => new { e.EmailUtilizador, e.ModeloTrotinete });
+                .HasKey(e => new { e.EmailUtilizador, e.IdTrotinete });
 
             modelBuilder.Entity<Escolhe>()
                 .HasOne(e => e.User)
@@ -56,12 +56,12 @@ namespace Scootlytic.Data
             modelBuilder.Entity<Escolhe>()
                 .HasOne(e => e.Trotinete)
                 .WithMany()
-                .HasForeignKey(e => e.ModeloTrotinete)
+                .HasForeignKey(e => e.IdTrotinete)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Relacionamento entre Adicionada, Carrinho e Trotinete
             modelBuilder.Entity<Adicionada>()
-                .HasKey(a => new { a.IdCarrinho, a.ModeloTrotinete });
+                .HasKey(a => new { a.IdCarrinho, a.IdTrotinete });
 
             modelBuilder.Entity<Adicionada>()
                 .HasOne(a => a.Carrinho)
@@ -72,7 +72,7 @@ namespace Scootlytic.Data
             modelBuilder.Entity<Adicionada>()
                 .HasOne(a => a.Trotinete)
                 .WithMany()
-                .HasForeignKey(a => a.ModeloTrotinete)
+                .HasForeignKey(a => a.IdTrotinete)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Relacionamento entre Passo e Peça
@@ -84,12 +84,12 @@ namespace Scootlytic.Data
 
             // Relacionamento entre Possui, Trotinete e Passo
             modelBuilder.Entity<Possui>()
-                .HasKey(p => new { p.ModeloTrotinete, p.IdPasso }); // Chave composta
+                .HasKey(p => new { p.IdTrotinete, p.IdPasso }); // Chave composta
 
             modelBuilder.Entity<Possui>()
                 .HasOne(p => p.Trotinete)
                 .WithMany()
-                .HasForeignKey(p => p.ModeloTrotinete)
+                .HasForeignKey(p => p.IdTrotinete)
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Possui>()

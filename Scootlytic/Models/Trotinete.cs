@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 public class Trotinete
 {
     [Key]
+    public int IdTrotinete {get; set; }
     public string Modelo { get; set; } // Chave primária do modelo (VARCHAR(100))
     
     public string InformacaoTecnica { get; set; } // Informações técnicas (TEXT)
