@@ -12,8 +12,8 @@ using Scootlytic.Data;
 namespace Scootlytic.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250114105054_FixUserCarrinhoRelationship")]
-    partial class FixUserCarrinhoRelationship
+    [Migration("20250114124419_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
