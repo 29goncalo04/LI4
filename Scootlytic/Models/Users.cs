@@ -1,8 +1,14 @@
 namespace Scootlytic.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 public class User
 {
-    public int Id { get; set; }
-    public string? Email { get; set; }
-    public string? Password { get; set; }
+    [Key]
+    public string Email { get; set; }  // Alterado para ser a chave primária
+    public string Password { get; set; }
+    public int? CartId { get; set; }  // Novo campo CartId
+
+    public Carrinho Carrinho { get; set; }
 }
