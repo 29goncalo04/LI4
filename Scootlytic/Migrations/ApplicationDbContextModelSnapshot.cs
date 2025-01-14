@@ -162,14 +162,13 @@ namespace Scootlytic.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("InformacaoTecnica")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Modelo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NumeroEncomenda")
+                    b.Property<int?>("NumeroEncomenda")
                         .HasColumnType("int");
 
                     b.HasKey("IdTrotinete");
@@ -284,8 +283,7 @@ namespace Scootlytic.Migrations
                     b.HasOne("Scootlytic.Models.Encomenda", "Encomenda")
                         .WithMany()
                         .HasForeignKey("NumeroEncomenda")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Encomenda");
                 });

@@ -104,9 +104,9 @@ namespace Scootlytic.Migrations
                     IdTrotinete = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Modelo = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    InformacaoTecnica = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    InformacaoTecnica = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Cor = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NumeroEncomenda = table.Column<int>(type: "int", nullable: false)
+                    NumeroEncomenda = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -116,7 +116,7 @@ namespace Scootlytic.Migrations
                         column: x => x.NumeroEncomenda,
                         principalTable: "Encomendas",
                         principalColumn: "Numero",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateTable(

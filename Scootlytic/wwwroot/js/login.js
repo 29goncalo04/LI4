@@ -2,6 +2,7 @@ document.querySelector("form").addEventListener("submit", async function(event) 
   event.preventDefault(); // Impede o envio padrão do formulário
 
   const email = document.querySelector('#email').value.trim();  
+  sessionStorage.setItem("userEmail", email);
   const password = document.querySelector('#password').value.trim();  
 
   // Envia os dados para o servidor via POST

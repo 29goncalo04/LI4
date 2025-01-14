@@ -12,7 +12,7 @@ public class Trotinete
     
     public string Cor { get; set; } // Cor da trotinete
     
-    public int NumeroEncomenda { get; set; } // Chave estrangeira para Encomenda
+    public int? NumeroEncomenda { get; set; } // Chave estrangeira para Encomenda
     // Propriedade de navegação para Encomenda
     public Encomenda Encomenda { get; set; } // Relacionamento com a tabela Encomenda
 }

@@ -696,8 +696,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jytgzt1owh</Fingerprint>
-      <Integrity>VV2FreiuUTfVUrdwfoHfei6iAyXSDmelOJLk42Wi3wc=</Integrity>
+      <Fingerprint>h33nsqtwij</Fingerprint>
+      <Integrity>bYMtQnoUqBYSQvxUwXcfxRcLDD+Xs3vfsQkQZqx8T8A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\login.js'))</OriginalItemSpec>
@@ -822,8 +822,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c6bfj9wdg9</Fingerprint>
-      <Integrity>VN0gocDD4Z0jpmKdvaUgMohw/PRs2Uuze858FW9/V2I=</Integrity>
+      <Fingerprint>o47fv3mqeh</Fingerprint>
+      <Integrity>2BxVoLqCMyZ1Wx9WAPZmk4nKyozEOPqHtd1F0j1pO7c=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\scooter.js'))</OriginalItemSpec>

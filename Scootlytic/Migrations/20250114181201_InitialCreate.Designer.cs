@@ -12,7 +12,7 @@ using Scootlytic.Data;
 namespace Scootlytic.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250114150219_InitialCreate")]
+    [Migration("20250114181201_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -165,14 +165,13 @@ namespace Scootlytic.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("InformacaoTecnica")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Modelo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NumeroEncomenda")
+                    b.Property<int?>("NumeroEncomenda")
                         .HasColumnType("int");
 
                     b.HasKey("IdTrotinete");
@@ -287,8 +286,7 @@ namespace Scootlytic.Migrations
                     b.HasOne("Scootlytic.Models.Encomenda", "Encomenda")
                         .WithMany()
                         .HasForeignKey("NumeroEncomenda")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Encomenda");
                 });

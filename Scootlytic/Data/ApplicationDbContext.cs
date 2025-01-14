@@ -22,6 +22,11 @@ namespace Scootlytic.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Trotinete>()
+                .Property(t => t.InformacaoTecnica)
+                .IsRequired(false); // Torna o campo opcional
+
+
             // Relacionamento entre Encomenda e User
             modelBuilder.Entity<Encomenda>()
                 .HasOne(e => e.User)
@@ -42,7 +47,7 @@ namespace Scootlytic.Data
                 .HasOne(t => t.Encomenda)
                 .WithMany()
                 .HasForeignKey(t => t.NumeroEncomenda)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
             // Relacionamento entre Escolhe, User e Trotinete
             modelBuilder.Entity<Escolhe>()
