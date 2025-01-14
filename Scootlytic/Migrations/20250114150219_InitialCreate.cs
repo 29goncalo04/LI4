@@ -12,6 +12,19 @@ namespace Scootlytic.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Carrinhos",
+                columns: table => new
+                {
+                    IdCarrinho = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ValorTotal = table.Column<decimal>(type: "decimal(6,2)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Carrinhos", x => x.IdCarrinho);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Pecas",
                 columns: table => new
                 {
@@ -34,6 +47,12 @@ namespace Scootlytic.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Email);
+                    table.ForeignKey(
+                        name: "FK_Users_Carrinhos_CartId",
+                        column: x => x.CartId,
+                        principalTable: "Carrinhos",
+                        principalColumn: "IdCarrinho",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -54,26 +73,6 @@ namespace Scootlytic.Migrations
                         principalTable: "Pecas",
                         principalColumn: "Referencia",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Carrinhos",
-                columns: table => new
-                {
-                    IdCarrinho = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ValorTotal = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
-                    EmailUtilizador = table.Column<string>(type: "nvarchar(450)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Carrinhos", x => x.IdCarrinho);
-                    table.ForeignKey(
-                        name: "FK_Carrinhos_Users_EmailUtilizador",
-                        column: x => x.EmailUtilizador,
-                        principalTable: "Users",
-                        principalColumn: "Email",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -198,12 +197,6 @@ namespace Scootlytic.Migrations
                 column: "IdTrotinete");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Carrinhos_EmailUtilizador",
-                table: "Carrinhos",
-                column: "EmailUtilizador",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Encomendas_EmailUtilizador",
                 table: "Encomendas",
                 column: "EmailUtilizador");
@@ -227,6 +220,13 @@ namespace Scootlytic.Migrations
                 name: "IX_Trotinetes_NumeroEncomenda",
                 table: "Trotinetes",
                 column: "NumeroEncomenda");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_CartId",
+                table: "Users",
+                column: "CartId",
+                unique: true,
+                filter: "[CartId] IS NOT NULL");
         }
 
         /// <inheritdoc />
@@ -242,9 +242,6 @@ namespace Scootlytic.Migrations
                 name: "Possui");
 
             migrationBuilder.DropTable(
-                name: "Carrinhos");
-
-            migrationBuilder.DropTable(
                 name: "Passos");
 
             migrationBuilder.DropTable(
@@ -258,6 +255,9 @@ namespace Scootlytic.Migrations
 
             migrationBuilder.DropTable(
                 name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Carrinhos");
         }
     }
 }

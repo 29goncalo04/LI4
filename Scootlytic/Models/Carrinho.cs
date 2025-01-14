@@ -10,8 +10,6 @@ public class Carrinho
     [Column(TypeName = "decimal(6,2)")]
     public decimal ValorTotal { get; set; } // Valor total com até 6 dígitos e 2 casas decimais
 
-    public string EmailUtilizador { get; set; } // Chave estrangeira para o email do usuário
+    public User User { get; set; }
 
-    // Navegação (opcional)
-    public User User { get; set; } // Relacionamento com User
 }

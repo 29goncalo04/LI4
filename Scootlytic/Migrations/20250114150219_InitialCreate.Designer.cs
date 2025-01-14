@@ -12,7 +12,7 @@ using Scootlytic.Data;
 namespace Scootlytic.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250114143114_InitialCreate")]
+    [Migration("20250114150219_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -48,17 +48,10 @@ namespace Scootlytic.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCarrinho"));
 
-                    b.Property<string>("EmailUtilizador")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<decimal>("ValorTotal")
                         .HasColumnType("decimal(6,2)");
 
                     b.HasKey("IdCarrinho");
-
-                    b.HasIndex("EmailUtilizador")
-                        .IsUnique();
 
                     b.ToTable("Carrinhos");
                 });
@@ -203,6 +196,10 @@ namespace Scootlytic.Migrations
 
                     b.HasKey("Email");
 
+                    b.HasIndex("CartId")
+                        .IsUnique()
+                        .HasFilter("[CartId] IS NOT NULL");
+
                     b.ToTable("Users");
                 });
 
@@ -223,17 +220,6 @@ namespace Scootlytic.Migrations
                     b.Navigation("Carrinho");
 
                     b.Navigation("Trotinete");
-                });
-
-            modelBuilder.Entity("Scootlytic.Models.Carrinho", b =>
-                {
-                    b.HasOne("Scootlytic.Models.User", "User")
-                        .WithOne("Carrinho")
-                        .HasForeignKey("Scootlytic.Models.Carrinho", "EmailUtilizador")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Scootlytic.Models.Encomenda", b =>
@@ -309,7 +295,17 @@ namespace Scootlytic.Migrations
 
             modelBuilder.Entity("Scootlytic.Models.User", b =>
                 {
-                    b.Navigation("Carrinho")
+                    b.HasOne("Scootlytic.Models.Carrinho", "Carrinho")
+                        .WithOne("User")
+                        .HasForeignKey("Scootlytic.Models.User", "CartId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Carrinho");
+                });
+
+            modelBuilder.Entity("Scootlytic.Models.Carrinho", b =>
+                {
+                    b.Navigation("User")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

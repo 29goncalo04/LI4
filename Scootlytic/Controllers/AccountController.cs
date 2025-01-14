@@ -62,15 +62,21 @@ namespace Scootlytic.Controllers
                 return Content("A senha precisa ter pelo menos 9 caracteres.");
             }
 
+            var newCarrinho = new Carrinho();
+            _context.Carrinhos.Add(newCarrinho);
+            await _context.SaveChangesAsync();
+
             // Cria um novo objeto User com os dados recebidos do formulário
             var newUser = new User
             {
                 Email = email,  // Você pode usar outro campo se necessário
-                Password = password
+                Password = password,
+                CartId = newCarrinho.IdCarrinho
             };
 
             // Adiciona o novo usuário na base de dados
             _context.Users.Add(newUser);
+
             await _context.SaveChangesAsync();
         
             // Lógica para criar o usuário (substitua com a lógica de base de dados real)

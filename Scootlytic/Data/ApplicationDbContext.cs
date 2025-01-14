@@ -29,12 +29,13 @@ namespace Scootlytic.Data
                 .HasForeignKey(e => e.EmailUtilizador)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Relacionamento entre Carrinho e User
-            modelBuilder.Entity<Carrinho>()
-                .HasOne(c => c.User)
-                .WithOne(u => u.Carrinho) // Um usuário tem um único carrinho
-                .HasForeignKey<Carrinho>(c => c.EmailUtilizador) // Relacionamento com o campo EmailUtilizador
-                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Carrinho) // O User tem um Carrinho
+                .WithOne(c => c.User) // O Carrinho tem um único User
+                .HasForeignKey<User>(u => u.CartId) // A chave estrangeira está no campo CartId do User
+                .OnDelete(DeleteBehavior.Restrict); // Não deletar o Carrinho quando o User for deletado
+
+
 
             // Relacionamento entre Trotinete e Encomenda
             modelBuilder.Entity<Trotinete>()
