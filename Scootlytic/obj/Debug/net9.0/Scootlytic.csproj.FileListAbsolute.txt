@@ -373,16 +373,13 @@
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/scopedcss/bundle/Scootlytic.styles.css
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/mj4zrtnr5j-wnroxhs01z.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/wcx9oe627d-rr4980j3io.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/cfy23nv0nl-xwjn5noerd.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/m455qn5xmp-j0cdz170g3.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/egmawwxkaw-dyyktercs4.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/a1ncwc3ylj-dw28tcfjd3.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/m63ixekz7y-pl2h1dv4de.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/br92phkjty-tt3atzd2m1.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/tk9iwyqj1r-oo893jl0u6.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/9fwjpkuqn5-sc0grh64h2.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/hilzymtrvp-g12tv8fww8.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/64aj41xa7m-61n19gt1b8.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/o15jig3a5o-3gjdnr4jt7.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/fdn1939yci-6xkn7y8oel.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/pxjtqxdybc-7h0cj2fmwr.gz
@@ -471,4 +468,7 @@
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/r0co1oggjs-pzy382pf4k.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/eddtffnhwu-i2p4gzfj11.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/8b8yfrv0mm-ird1qh7r0g.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/q0uqojkblk-ii44e0o3pm.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/cfy23nv0nl-q4dto9had8.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/9fwjpkuqn5-qq9qfk0wnn.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/64aj41xa7m-04aaxz6t8a.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/q0uqojkblk-5iwcbwv5px.gz

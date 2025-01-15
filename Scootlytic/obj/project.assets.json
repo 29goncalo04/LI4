@@ -4361,25 +4361,24 @@
     ]
   },
   "packageFolders": {
-    "/home/nunoribeiro/.nuget/packages/": {}
+    "/home/goncalo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Scootlytic.csproj",
+      "projectUniqueName": "/home/goncalo/3_ano/LI4/Scootlytic/Scootlytic.csproj",
       "projectName": "Scootlytic",
-      "projectPath": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Scootlytic.csproj",
-      "packagesPath": "/home/nunoribeiro/.nuget/packages/",
-      "outputPath": "/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/",
+      "projectPath": "/home/goncalo/3_ano/LI4/Scootlytic/Scootlytic.csproj",
+      "packagesPath": "/home/goncalo/.nuget/packages/",
+      "outputPath": "/home/goncalo/3_ano/LI4/Scootlytic/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/nunoribeiro/.nuget/NuGet/NuGet.Config"
+        "/home/goncalo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4438,7 +4437,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/goncalo/.dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
