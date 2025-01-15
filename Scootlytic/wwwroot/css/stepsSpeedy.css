@@ -52,14 +52,13 @@ body {
 
 .step-grid {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
 
 .image img{
-  width: 1000px;
+  width: 500px;
   height: auto;
   margin-top: 50px; /* Mover para baixo */
   margin-left: 50px; /* Mover para a direita */
@@ -69,18 +68,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-right: 300px;
-}
-
-.part {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  position: absolute; /* Torna a posição absoluta */
+  right: 0; /* Coloca a seção colada à direita */
+  padding: 20px; /* Espaçamento interno para evitar que o conteúdo encoste nas bordas */
 }
 
 .part img{
-  height: 400px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
 }
 
 .part-number {
@@ -101,8 +96,7 @@ body {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
-  margin-top: 130px;
-  margin-left: 200px;
+  margin-left: 150px;
 }
 
 .steps .step {

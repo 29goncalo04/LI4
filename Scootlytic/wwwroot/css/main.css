@@ -6,20 +6,21 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 33px 20px;
     background-color: #E1F4FA;
-}
-
-.header .cart-button {
-    margin-left: -1700px;
+    gap: 30px; /* Espaçamento uniforme entre os botões */
 }
 
 .header img {
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+.header img.back-button {
+    margin-right: auto; /* Empurra o botão "back" para o lado esquerdo */
 }
 
 .product {
