@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xwjn5noerd</Fingerprint>
-      <Integrity>kaWFfPeZxU5Xsu/6JPJhK5y+W0IMUJvN7FRc2HV+3Po=</Integrity>
+      <Fingerprint>q4dto9had8</Fingerprint>
+      <Integrity>ulNXTuR+k6kaROoyD7jjLq2NmdpR7ruiHpOIn7bsfew=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\main.css'))</OriginalItemSpec>
@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>sc0grh64h2</Fingerprint>
-      <Integrity>zKTw6bgTpDMdenGDC3cyg4z2UTv5hUa8frQfAeiinBM=</Integrity>
+      <Fingerprint>qq9qfk0wnn</Fingerprint>
+      <Integrity>0vISNus+KUdQugPcO/YRy+AT8NDUtOEzvnm72Ata4nk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\stepsSpeedy.css'))</OriginalItemSpec>
@@ -467,6 +467,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\mbway.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\nigga.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Scootlytic</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Scootlytic</BasePath>
+      <RelativePath>images/nigga.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>goevqbh58z</Fingerprint>
+      <Integrity>EBIB8jB2DNxnunGQkF4elpPCU86drFN+Jjdw+78iTlU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\nigga.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\packages.png'))">
       <SourceType>Package</SourceType>
@@ -840,8 +858,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>u5cve6q99a</Fingerprint>
-      <Integrity>UtUV7AgJiftFHAIlKUakuPB+utlC7qU9oKEybpNPGgY=</Integrity>
+      <Fingerprint>r163b5s29o</Fingerprint>
+      <Integrity>X6CcMDEV0w05YWsKImtf/7WbLMz++CxzKDIer1XyWcA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\stepsSpeedy.js'))</OriginalItemSpec>
