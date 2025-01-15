@@ -35,7 +35,31 @@ namespace Scootlytic.Controllers
 
         public IActionResult UsersPackages()
         {
-            return View();
+            return View();  // Agora carrega a View `userspackages.cshtml`
+        }
+
+        [HttpGet]
+        public IActionResult GetUserOrders()
+        {
+            var userEmail = Request.Headers["User-Email"].ToString(); // Pega o e-mail do usuário autenticado
+    
+            var encomendas = _context.Encomendas
+                .Where(e => e.EmailUtilizador == userEmail)
+                .Select(e => new
+                {
+                    e.Numero,
+                    e.DataEntrega,
+                    e.MetodoPagamento,
+                    e.Condicao,
+                    Trotinetes = _context.Trotinetes
+                        .Where(t => t.NumeroEncomenda == e.Numero)
+                        .GroupBy(t => t.Modelo)
+                        .Select(g => new { Modelo = g.Key, Quantidade = g.Count() })
+                        .ToList()
+                })
+                .ToList();
+    
+            return Json(encomendas); // Agora só retorna JSON quando chamado via fetch()
         }
 
 

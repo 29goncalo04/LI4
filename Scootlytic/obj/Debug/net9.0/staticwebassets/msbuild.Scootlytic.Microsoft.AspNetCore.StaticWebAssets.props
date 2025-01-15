@@ -876,8 +876,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>rl7ulwqor2</Fingerprint>
-      <Integrity>ASnbUuS0A3KZJiOof7vXmk5zMy4PqPslLhehn4/XQ30=</Integrity>
+      <Fingerprint>ii44e0o3pm</Fingerprint>
+      <Integrity>JgLRKC+c6bCEbXbfLjDD+T6bUfCemeNDKDmfqTfQiRg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\users_packages.js'))</OriginalItemSpec>
