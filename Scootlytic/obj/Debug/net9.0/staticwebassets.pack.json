@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets/css/users_packages.css"
     },
     {
+      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/css/users_packagesAdmin.css",
+      "PackagePath": "staticwebassets/css/users_packagesAdmin.css"
+    },
+    {
       "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
@@ -195,6 +199,10 @@
     {
       "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/users_packages.js",
       "PackagePath": "staticwebassets/js/users_packages.js"
+    },
+    {
+      "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/js/users_packagesAdmin.js",
+      "PackagePath": "staticwebassets/js/users_packagesAdmin.js"
     },
     {
       "Id": "/home/goncalo/3_ano/LI4/Scootlytic/wwwroot/lib/bootstrap/LICENSE",

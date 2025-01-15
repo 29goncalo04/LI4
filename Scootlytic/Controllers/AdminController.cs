@@ -78,5 +78,10 @@ namespace Scootlytic.Controllers
         
             return Json(users); // Retorna os emails como um array JSON
         }
+
+        public IActionResult UsersPackagesAdmin()
+        {
+            return View();
+        }
     }
 }

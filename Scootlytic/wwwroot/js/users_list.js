@@ -40,6 +40,11 @@ document.getElementById("search-input").addEventListener("input", function() {
                 const div = document.createElement('div');
                 div.classList.add('result-item');  // Altere 'search-item' para 'result-item'
                 div.textContent = user;  // Supondo que 'user' tenha uma propriedade 'email'
+                // Adiciona o evento de clique para armazenar o email do usuário no sessionStorage
+                div.addEventListener('click', () => {
+                    sessionStorage.setItem('userEmail', user);  // Armazenar o email do usuário selecionado
+                    window.location.href = "/Admin/UsersPackagesAdmin";  // Redirecionar para a página das encomendas
+                });
                 resultsContainer.appendChild(div);
             });
             

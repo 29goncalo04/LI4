@@ -1,10 +1,19 @@
 // Função para carregar as encomendas do usuário
 async function loadOrders() {
     try {
+        const userEmail = sessionStorage.getItem('userEmail'); // Pega o email do usuário armazenado
+
+        // Verifica se o email do usuário existe no sessionStorage
+        if (!userEmail) {
+            alert('Usuário não selecionado');
+            return;
+        }
+        document.getElementById("user-orders-title").textContent = `Orders from ${userEmail}`;
+
         const response = await fetch('/Admin/GetUserOrders', {
             method: 'GET',
             headers: {
-                'User-Email': sessionStorage.getItem('userEmail'),
+                'User-Email': userEmail,  // Passa o email do usuário como cabeçalho
                 'Content-Type': 'application/json'
             }
         });
@@ -28,6 +37,7 @@ async function loadOrders() {
         alert('Erro ao carregar as encomendas. Tente novamente mais tarde.');
     }
 }
+
 
 function formatDate(dateString) {
     const date = new Date(dateString);
@@ -116,19 +126,6 @@ function displayOrders(orders) {
     }
 }
 
-function goToPage(model) {
-    // Função para navegar para a página detalhada do modelo de trotinete
-    if(model === "SPEEDY Electric Scooter") window.location.href = "/Scooter/stepsSpeedy";  
-    else alert("lalalala");
-    //window.location.href = "/Scooter/stepsSpeedy";
-}
-
-
-
-
-
-
-
 
 // Chamar a função para carregar as encomendas assim que a página for carregada
 document.addEventListener('DOMContentLoaded', loadOrders);
@@ -136,5 +133,5 @@ document.addEventListener('DOMContentLoaded', loadOrders);
 
 // Função para voltar à página principal
 document.querySelector(".back-button").addEventListener("click", () => {
-    window.location.href = "/Main/Main";
+    window.location.href = "/Admin/UsersList";
 });
