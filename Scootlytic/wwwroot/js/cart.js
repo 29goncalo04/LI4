@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const userEmail = sessionStorage.getItem("userEmail");
-    const trashIcons = document.querySelectorAll(".trash-icon");
     const backArrow = document.querySelector(".back-arrow");
     const paypal = document.querySelector(".paypal");
     const mbway = document.querySelector(".mbway");
-    const totalPriceElement = document.querySelector(".totalprice");
 
     if (userEmail) {
         fetch('/Cart/GetCartItems', {

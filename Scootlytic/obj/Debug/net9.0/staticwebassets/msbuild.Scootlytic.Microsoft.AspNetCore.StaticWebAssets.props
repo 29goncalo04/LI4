@@ -678,8 +678,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1isi4fnb9j</Fingerprint>
-      <Integrity>ybAfKDR8osgvOmVhb4M8y9fZnR+l9iCeWWW19yTB5+8=</Integrity>
+      <Fingerprint>zqlvs3a1hh</Fingerprint>
+      <Integrity>2+eNewEAdVAUzgYTqR+bzacFoWDfq0ILr9G305x0qO0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\cart.js'))</OriginalItemSpec>
@@ -732,8 +732,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q4e5hi43a5</Fingerprint>
-      <Integrity>yg9cYOHSWSZqQse6dLSoEinpiv9tG2Ue3taTqXUVAkc=</Integrity>
+      <Fingerprint>a7lanwctqw</Fingerprint>
+      <Integrity>1oClhz2SercmZ/W4VTxIB7uiVLvBjk/n1C488matspQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\mbway.js'))</OriginalItemSpec>
@@ -786,8 +786,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vohw0phs06</Fingerprint>
-      <Integrity>ccrXigI6Vl6gXZREgaYQhj1jOQvoazxB6cp4AeLBZ0s=</Integrity>
+      <Fingerprint>pzy382pf4k</Fingerprint>
+      <Integrity>5XP3DzwSacFCpJiQVp2+Kolc2UMWQXU9qWa2iiK0W2U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\paypal.js'))</OriginalItemSpec>

@@ -62,16 +62,16 @@ namespace Scootlytic.Cart
         {
             var userEmail = Request.Headers["User-Email"].ToString(); // Pega o email do header
             Console.WriteLine(modelo);
-        
+
             // Encontrar o carrinho do usuário
             var carrinho = _context.Carrinhos
                 .FirstOrDefault(c => c.User.Email == userEmail);
-        
+
             if (carrinho == null)
             {
                 return Json(new { error = "Carrinho não encontrado." });
             }
-        
+
             // Buscar todas as trotinetes do modelo especificado associadas ao carrinho
             var itens = _context.Adicionada
                 .Join(
@@ -82,33 +82,33 @@ namespace Scootlytic.Cart
                 )
                 .Where(a => a.Adicionada.IdCarrinho == carrinho.IdCarrinho && a.Trotinete.Modelo == modelo)
                 .ToList();
-        
+
             if (itens.Count == 0)
             {
                 Console.WriteLine($"Nenhuma trotinete com o modelo {modelo} encontrada no carrinho.");
                 return Json(new { error = "Nenhuma trotinete do modelo especificado encontrada no carrinho." });
             }
-        
+
             // Remover todas as trotinetes do modelo especificado da tabela Adicionada
             _context.Adicionada.RemoveRange(itens.Select(i => i.Adicionada));
             _context.SaveChanges();
-        
+
             // Verificar se ainda existem trotinetes do modelo especificado em outros carrinhos
             var trotineteIds = itens.Select(i => i.Trotinete.IdTrotinete).Distinct().ToList();
             var trotinetesNaoAssociadas = _context.Adicionada
                 .Any(a => trotineteIds.Contains(a.IdTrotinete));
-        
+
             // Se não houverem mais registros de trotinetes associadas ao modelo, remover da tabela Trotinetes
             if (!trotinetesNaoAssociadas)
             {
                 var trotinetesARemover = _context.Trotinetes
                     .Where(t => trotineteIds.Contains(t.IdTrotinete))
                     .ToList();
-        
+
                 _context.Trotinetes.RemoveRange(trotinetesARemover);
                 _context.SaveChanges();
             }
-        
+
             // Recalcular o total do carrinho após a remoção
             var itemsCarrinho = _context.Adicionada
                 .Where(a => a.IdCarrinho == carrinho.IdCarrinho)
@@ -119,18 +119,75 @@ namespace Scootlytic.Cart
                     (a, t) => new { Trotinete = t } // Seleciona apenas a Trotinete
                 )
                 .ToList();
-        
+
             // Calcular o novo valor total
             decimal newTotalPrice = itemsCarrinho
                 .Sum(item => item.Trotinete.Modelo == "SPEEDY Electric Scooter" ? 79.99m : item.Trotinete.Modelo == "GLIDY Scooter" ? 49.99m : 0);
-        
+
             // Atualizar o valor total do carrinho na tabela Carrinho
             carrinho.ValorTotal = newTotalPrice;
             _context.SaveChanges();
-            
+
             // Retorna o novo total
             return Json(new { newTotalPrice });
         }
 
+        [HttpPost]
+        public IActionResult FinalizarCompra([FromBody] Dictionary<string, string> requestData)        {
+            var userEmail = Request.Headers["User-Email"].ToString();
+            requestData.TryGetValue("MetodoPagamento", out string metodoPagamento);
+
+            // Encontrar o carrinho do usuário
+            var carrinho = _context.Carrinhos
+                .FirstOrDefault(c => c.User.Email == userEmail);
+
+            if (carrinho == null)
+            {
+                return Json(new { error = "Carrinho não encontrado." });
+            }
+
+            // Buscar todas as trotinetes associadas ao carrinho
+            var trotinetesNoCarrinho = _context.Adicionada
+                .Where(a => a.IdCarrinho == carrinho.IdCarrinho)
+                .Select(a => a.Trotinete)
+                .ToList();
+
+            if (trotinetesNoCarrinho.Count == 0)
+            {
+                return Json(new { error = "O carrinho está vazio." });
+            }
+
+            // Criar uma nova encomenda associada ao usuário
+            var novaEncomenda = new Encomenda
+            {
+                DataEntrega = DateTime.UtcNow.AddDays(3), // Simulação de prazo de entrega
+                MetodoPagamento = metodoPagamento,
+                Condicao = 1, // Status de encomenda (1 = processando, por exemplo)
+                EmailUtilizador = userEmail
+            };
+
+            _context.Encomendas.Add(novaEncomenda);
+            _context.SaveChanges(); // Salvar para obter o ID da encomenda
+
+            // Atualizar as trotinetes para apontarem para o ID da nova encomenda
+            foreach (var trotinete in trotinetesNoCarrinho)
+            {
+                trotinete.NumeroEncomenda = novaEncomenda.Numero;
+            }
+
+            // Remover as associações do carrinho na tabela Adicionada
+            var itensAdicionados = _context.Adicionada
+                .Where(a => a.IdCarrinho == carrinho.IdCarrinho)
+                .ToList();
+
+            _context.Adicionada.RemoveRange(itensAdicionados);
+
+            // Atualizar o valor total do carrinho para 0
+            carrinho.ValorTotal = 0;
+
+            _context.SaveChanges(); // Salvar todas as alterações
+
+            return Json(new { success = true, message = "Pagamento efetuado e encomenda criada." });
+        }
     }
 }
