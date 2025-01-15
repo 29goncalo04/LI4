@@ -1,5 +1,5 @@
 @{
-    Layout = null; // Defina um layout apropriado se necessário, por exemplo: "~/Views/Shared/_Layout.cshtml"
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -12,47 +12,18 @@
 </head>
 <body>
     <h2>PRODUCTS</h2>
-    <div class="cart">
-        <div class="product">
-            <img class="scooter" src="/images/SpeedyScooter.png" alt="Scooter">
-            <div class="details">
-                <div class="quantity-wrapper">
-                    <p class="quantity-label">Quantity:</p>
-                    <p class="quantity-value">x2</p>
-                </div>
-            </div>
-            <div class="price-wrapper">
-                <p class="price-label">Price:</p>
-                <p class="price-value">159.98€</p>
-            </div>
-            <img class="trash-icon" src="/images/lixo.png" alt="Remover">
-        </div>
-
-        <div class="product">
-            <img class="scooter" src="/images/GlidyScooter.png" alt="Scooter">
-            <div class="details">
-                <div class="quantity-wrapper">
-                    <p class="quantity-label">Quantity:</p>
-                    <p class="quantity-value">x2</p>
-                </div>
-            </div>
-            <div class="price-wrapper">
-                <p class="price-label">Price:</p>
-                <p class="price-value">59.98€</p>
-            </div>
-            <img class="trash-icon" src="/images/lixo.png" alt="Remover">
-        </div>
-
-        <div class="payment">
-            <img class="back-arrow" src="/images/backArrow.png" alt="Seta">
-            <img class="paypal" src="/images/paypal.png" alt="PayPal">
-            <img class="mbway" src="/images/mbway.png" alt="MB WAY">
-            <div class="total">
-                <p class="totaltext">TOTAL:</p>
-                <p class="totalprice">219.96€</p>
-            </div>
-        </div>        
+    <div class="cart" id="cart-items-container">
+        <!-- O conteúdo será carregado via AJAX -->
     </div>
+    <div class="payment">
+        <img class="back-arrow" src="/images/backArrow.png" alt="Seta">
+        <img class="paypal" src="/images/paypal.png" alt="PayPal">
+        <img class="mbway" src="/images/mbway.png" alt="MB WAY">
+        <div class="total">
+            <p class="totaltext">TOTAL:</p>
+            <p class="totalprice" id="total-price">0€</p> <!-- Total será atualizado com JavaScript -->
+        </div>
+    </div>        
     <script src="/js/cart.js"></script>
 </body>
 </html>
