@@ -25,7 +25,6 @@
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/br92phkjty-tt3atzd2m1.gz
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/tk9iwyqj1r-oo893jl0u6.gz
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/8b8yfrv0mm-ird1qh7r0g.gz
-/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/64aj41xa7m-61n19gt1b8.gz
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/ppj4ia0ypk-cxuenbz53y.gz
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/cusenz6iq2-bqjiyaj88i.gz
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/xvzh3pmsnc-c2jlpeoesf.gz
@@ -104,7 +103,6 @@
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/o15jig3a5o-3gjdnr4jt7.gz
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/fdn1939yci-6xkn7y8oel.gz
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/pxjtqxdybc-7h0cj2fmwr.gz
-/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/q0uqojkblk-rl7ulwqor2.gz
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/bin/Debug/net9.0/Azure.Core.dll
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/bin/Debug/net9.0/Azure.Identity.dll
 /home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/bin/Debug/net9.0/Humanizer.dll
@@ -474,3 +472,20 @@
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/vsy79z0y3c-panlf573c6.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/pya6bsdjwv-pz6wlclym3.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/xnhdr2xhot-4scjxw03tw.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/eddtffnhwu-i2p4gzfj11.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/cfy23nv0nl-q4dto9had8.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/236roav2nf-5pu42ryp5o.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/9fwjpkuqn5-qq9qfk0wnn.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/hilzymtrvp-g12tv8fww8.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/pya6bsdjwv-pz6wlclym3.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/64aj41xa7m-04aaxz6t8a.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/zjdb5pogn2-zqlvs3a1hh.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/1bbmyl9usi-h33nsqtwij.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/8a21re9sma-a7lanwctqw.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/r0co1oggjs-pzy382pf4k.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/2xd4p9iwix-o47fv3mqeh.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/mxno29g094-libugb8716.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/vett1c3o6q-ahkz9oskvq.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/vsy79z0y3c-panlf573c6.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/xnhdr2xhot-4scjxw03tw.gz
+/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/obj/Debug/net9.0/compressed/q0uqojkblk-ryixkdtvqc.gz

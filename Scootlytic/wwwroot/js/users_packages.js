@@ -119,7 +119,8 @@ function displayOrders(orders) {
 function goToPage(model) {
     // Função para navegar para a página detalhada do modelo de trotinete
     if(model === "SPEEDY Electric Scooter") window.location.href = "/Scooter/stepsSpeedy";  
-    else alert("lalalala");
+    else if (model === "GLIDY Scooter") window.location.href = "/Scooter/stepsGlidy";
+    else alert("page not found");
     //window.location.href = "/Scooter/stepsSpeedy";
 }
 

@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVXNlcnNQYWNrYWdlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Admin/UsersPackagesAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVXNlcnNQYWNrYWdlc0FkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Cart/cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9jYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Scooter/scooter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2Nvb3Rlci9zY29vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Scooter/stepsGlidy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2Nvb3Rlci9zdGVwc0dsaWR5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/nunoribeiro/Desktop/Li4/ProjetoLI/Scootlytic/Views/Scooter/stepsSpeedy.cshtml]

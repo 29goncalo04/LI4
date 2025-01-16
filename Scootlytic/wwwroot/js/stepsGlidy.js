@@ -10,47 +10,18 @@ const stepParts = document.getElementById('step-parts');
 // Mapeamento das imagens e partes associadas a cada passo
 const stepDetails = {
   1: {
-    image: "/images/SScooter1_2_3.png",
+    image: "/images/glidyStep1.png",
     parts: [
       { img: "/images/frames.png", number: 1, name: "Frame" },
     ],
     instruction: "Assemble the frame and deck"
   },
   2: {
-    image: "/images/SScooter1_2_3.png",
+    image: "/images/GlidyScooter.png",
     parts: [
-      { img: "/images/engine.png", number: 1, name: "Motor" },
+      { img: "/images/tires.png", number: 2, name: "Wheels" }
     ],
-    instruction: "Install the motor."
-  },
-  3: {
-    image: "/images/SScooter1_2_3.png",
-    parts: [
-      { img: "/images/battery.png", number: 1, name: "Battery" }
-    ],
-    instruction: "Connect the battery."
-  },
-  4: {
-    image: "/images/SScooter4.png",
-    parts: [
-      { img: "/images/controlScreens.png", number: 1, name: "Display" }
-    ],
-    instruction: "Set up the display."
-  },
-  5: {
-    image: "/images/SScooter5.png",
-    parts: [
-      { img: "/images/tires.png", number: 2, name: "Wheels" },
-      { img: "/images/brakes.png", number: 1, name: "Brakes" }
-    ],
-    instruction: "Install the wheels and braking system."
-  },
-  6: {
-    image: "/images/SpeedyScooter.png",
-    parts: [
-      { img: "/images/lights.png", number: 2, name: "Lights" }
-    ],
-    instruction: "Add lights."
+    instruction: "Install the wheels."
   }
 };
 
