@@ -82,11 +82,18 @@ namespace Scootlytic.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Relacionamento entre Passo e Peça
-            modelBuilder.Entity<Passo>()
-                .HasOne(p => p.Peca)
-                .WithMany()
-                .HasForeignKey(p => p.ReferenciaPeca)
-                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<PassoPeca>()
+            .HasKey(pp => new { pp.PassoId, pp.PecaReferencia }); // Chave composta
+
+            modelBuilder.Entity<PassoPeca>()
+                .HasOne(pp => pp.Passo)
+                .WithMany() // Não precisa de uma coleção de PassoPeca no Passo
+                .HasForeignKey(pp => pp.PassoId); // Chave estrangeira para Passo
+    
+            modelBuilder.Entity<PassoPeca>()
+                .HasOne(pp => pp.Peca)
+                .WithMany() // Não precisa de uma coleção de PassoPeca na Peca
+                .HasForeignKey(pp => pp.PecaReferencia);
 
             // Relacionamento entre Possui, Trotinete e Passo
             modelBuilder.Entity<Possui>()

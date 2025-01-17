@@ -25,10 +25,25 @@ namespace Scootlytic.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Passos",
+                columns: table => new
+                {
+                    idPasso = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NumeroPasso = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Passos", x => x.idPasso);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Pecas",
                 columns: table => new
                 {
-                    Referencia = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Referencia = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Estado = table.Column<byte>(type: "tinyint", nullable: false)
                 },
                 constraints: table =>
@@ -56,20 +71,24 @@ namespace Scootlytic.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Passos",
+                name: "PassoPeca",
                 columns: table => new
                 {
-                    idPasso = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    NumeroPasso = table.Column<int>(type: "int", nullable: false),
-                    ReferenciaPeca = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    PassoId = table.Column<int>(type: "int", nullable: false),
+                    PecaReferencia = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Passos", x => x.idPasso);
+                    table.PrimaryKey("PK_PassoPeca", x => new { x.PassoId, x.PecaReferencia });
                     table.ForeignKey(
-                        name: "FK_Passos_Pecas_ReferenciaPeca",
-                        column: x => x.ReferenciaPeca,
+                        name: "FK_PassoPeca_Passos_PassoId",
+                        column: x => x.PassoId,
+                        principalTable: "Passos",
+                        principalColumn: "idPasso",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PassoPeca_Pecas_PecaReferencia",
+                        column: x => x.PecaReferencia,
                         principalTable: "Pecas",
                         principalColumn: "Referencia",
                         onDelete: ReferentialAction.Cascade);
@@ -207,9 +226,9 @@ namespace Scootlytic.Migrations
                 column: "IdTrotinete");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Passos_ReferenciaPeca",
-                table: "Passos",
-                column: "ReferenciaPeca");
+                name: "IX_PassoPeca_PecaReferencia",
+                table: "PassoPeca",
+                column: "PecaReferencia");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Possui_IdPasso",
@@ -239,16 +258,19 @@ namespace Scootlytic.Migrations
                 name: "Escolhe");
 
             migrationBuilder.DropTable(
+                name: "PassoPeca");
+
+            migrationBuilder.DropTable(
                 name: "Possui");
+
+            migrationBuilder.DropTable(
+                name: "Pecas");
 
             migrationBuilder.DropTable(
                 name: "Passos");
 
             migrationBuilder.DropTable(
                 name: "Trotinetes");
-
-            migrationBuilder.DropTable(
-                name: "Pecas");
 
             migrationBuilder.DropTable(
                 name: "Encomendas");

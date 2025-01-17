@@ -22,37 +22,37 @@
             <div class="part battery">
                 <img src="/images/battery.png" alt="Batteries" class="battery-img">
                 <p>Batteries</p>
-                <span>10</span>
+                <span class="@(Model["Batteries"] < 8 ? "low-quantity" : "")">@Model["Batteries"]</span> <!-- Exibe a quantidade de Batteries -->
             </div>
             <div class="part brakes">
                 <img src="/images/brakes.png" alt="Brakes" class="brakes-img">
                 <p>Brakes</p>
-                <span>13</span>
+                <span class="@(Model["Brakes"] < 8 ? "low-quantity" : "")">@Model["Brakes"]</span> <!-- Exibe a quantidade de Brakes -->
             </div>
             <div class="part lights">
                 <img src="/images/lights.png" alt="Lights" class="lights-img">
                 <p>Lights</p>
-                <span>30</span>
+                <span class="@(Model["Lights"] < 8 ? "low-quantity" : "")">@Model["Lights"]</span> <!-- Exibe a quantidade de Lights -->
             </div>
             <div class="part tires">
                 <img src="/images/tires.png" alt="Wheels" class="tires-img">
                 <p>Wheels</p>
-                <span>22</span>
+                <span class="@(Model["Wheels"] < 8 ? "low-quantity" : "")">@Model["Wheels"]</span> <!-- Exibe a quantidade de Wheels -->
             </div>
             <div class="part engine">
                 <img src="/images/engine.png" alt="Motors" class="engine-img">
                 <p>Motors</p>
-                <span>6</span>
+                <span class="@(Model["Motors"] < 8 ? "low-quantity" : "")">@Model["Motors"]</span> <!-- Exibe a quantidade de Motors -->
             </div>
             <div class="part control-screens">
                 <img src="/images/controlScreens.png" alt="Control Screens" class="control-screens-img">
                 <p>Control Screens</p>
-                <span>8</span>
+                <span class="@(Model["Control Screens"] < 8 ? "low-quantity" : "")">@Model["Control Screens"]</span> <!-- Exibe a quantidade de Control Screens -->
             </div>
             <div class="part frames">
                 <img src="/images/frames.png" alt="Frames" class="frames-img">
                 <p>Frames</p>
-                <span>7</span>
+                <span class="@(Model["Frames"] < 8 ? "low-quantity" : "")">@Model["Frames"]</span> <!-- Exibe a quantidade de Frames -->
             </div>
         </div>        
     </div>

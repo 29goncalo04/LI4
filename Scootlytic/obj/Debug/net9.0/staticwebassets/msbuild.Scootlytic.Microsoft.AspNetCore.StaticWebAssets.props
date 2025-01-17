@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dyyktercs4</Fingerprint>
-      <Integrity>9dIIEZJQGfNNlLWxFxgLFbFjrECXeHU/NLTUP2r3TcI=</Integrity>
+      <Fingerprint>8gxl8wo4de</Fingerprint>
+      <Integrity>aFvHBsewHjXRIiZEgZ+0Ilf32cSyZ84jYygucD1ljSM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\parts.css'))</OriginalItemSpec>
@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5pu42ryp5o</Fingerprint>
-      <Integrity>l51A8k8u58m793hdZObEDlHULPhSkC1yWFssGPGgHhA=</Integrity>
+      <Fingerprint>nxqftxf63u</Fingerprint>
+      <Integrity>Gwc0WCzb9VQB0UQ1rmptX6kfSf1HqElDM9sV1fGW7Cg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\stepsGlidy.css'))</OriginalItemSpec>

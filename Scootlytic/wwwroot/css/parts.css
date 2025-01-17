@@ -65,6 +65,10 @@ body {
     padding: 5px 50px;
 }
 
+.low-quantity {
+    color: red; /* Define o texto em vermelho para quantidades baixas */
+}
+
 /* Ajustes de imagens individuais */
 .battery-img {
     width: 160px; /* Tamanho específico para a bateria */

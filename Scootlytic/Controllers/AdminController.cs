@@ -23,9 +23,23 @@ namespace Scootlytic.Controllers
         }
 
         // Action para renderizar a página de peças
-        public IActionResult Parts()
+        public async Task<IActionResult> Parts()
         {
-            return View();
+            // Agrupa as peças com Estado == 0 e conta a quantidade de cada tipo
+            var pecasQuantidades = await _context.Pecas
+                .Where(p => p.Estado == 0) // Filtra para considerar apenas as peças com Estado 0
+                .GroupBy(p => p.Nome)
+                .Select(g => new
+                {
+                    Nome = g.Key,
+                    Quantidade = g.Count()
+                })
+                .ToListAsync();
+    
+            // Cria um dicionário para armazenar a quantidade de cada peça
+            var pecasQuantidadeDict = pecasQuantidades.ToDictionary(p => p.Nome, p => p.Quantidade);
+    
+            return View(pecasQuantidadeDict);
         }
 
         public IActionResult UsersList()

@@ -17,7 +17,7 @@ namespace Scootlytic.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.0")
+                .HasAnnotation("ProductVersion", "9.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -108,26 +108,40 @@ namespace Scootlytic.Migrations
                     b.Property<int>("NumeroPasso")
                         .HasColumnType("int");
 
-                    b.Property<string>("ReferenciaPeca")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.HasKey("idPasso");
-
-                    b.HasIndex("ReferenciaPeca");
 
                     b.ToTable("Passos");
                 });
 
+            modelBuilder.Entity("Scootlytic.Models.PassoPeca", b =>
+                {
+                    b.Property<int>("PassoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PecaReferencia")
+                        .HasColumnType("int");
+
+                    b.HasKey("PassoId", "PecaReferencia");
+
+                    b.HasIndex("PecaReferencia");
+
+                    b.ToTable("PassoPeca");
+                });
+
             modelBuilder.Entity("Scootlytic.Models.Peca", b =>
                 {
-                    b.Property<string>("Referencia")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("Referencia")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Referencia"));
 
                     b.Property<byte>("Estado")
                         .HasColumnType("tinyint");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Referencia");
 
@@ -248,13 +262,21 @@ namespace Scootlytic.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Scootlytic.Models.Passo", b =>
+            modelBuilder.Entity("Scootlytic.Models.PassoPeca", b =>
                 {
-                    b.HasOne("Scootlytic.Models.Peca", "Peca")
+                    b.HasOne("Scootlytic.Models.Passo", "Passo")
                         .WithMany()
-                        .HasForeignKey("ReferenciaPeca")
+                        .HasForeignKey("PassoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Scootlytic.Models.Peca", "Peca")
+                        .WithMany()
+                        .HasForeignKey("PecaReferencia")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Passo");
 
                     b.Navigation("Peca");
                 });

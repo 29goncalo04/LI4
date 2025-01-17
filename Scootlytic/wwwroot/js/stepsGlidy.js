@@ -69,3 +69,8 @@ steps.forEach(step => {
     });
   });
 });
+
+// Função para voltar à página principal
+document.querySelector(".back-button").addEventListener("click", () => {
+  window.location.href = "/Admin/UsersPackages";
+});

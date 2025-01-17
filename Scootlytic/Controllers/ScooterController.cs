@@ -65,6 +65,34 @@ namespace Scootlytic.Scooter
             {
                 _context.Trotinetes.Add(newScooter);
                 await _context.SaveChangesAsync();
+                List<Possui> possui = new List<Possui>();
+    
+                if (newScooter.Modelo == "SPEEDY Electric Scooter")
+                {
+                    // Para o modelo SPEEDY, inserimos os IDs de passos 1, 2, 3, 4, 5, 6
+                    possui.AddRange(new List<Possui>
+                    {
+                        new Possui { IdPasso = 1, IdTrotinete = newScooter.IdTrotinete },
+                        new Possui { IdPasso = 2, IdTrotinete = newScooter.IdTrotinete },
+                        new Possui { IdPasso = 3, IdTrotinete = newScooter.IdTrotinete },
+                        new Possui { IdPasso = 4, IdTrotinete = newScooter.IdTrotinete },
+                        new Possui { IdPasso = 5, IdTrotinete = newScooter.IdTrotinete },
+                        new Possui { IdPasso = 6, IdTrotinete = newScooter.IdTrotinete }
+                    });
+                }
+                else if (newScooter.Modelo == "GLIDY Scooter")
+                {
+                    // Para o modelo GLIDY, inserimos os IDs de passos 7 e 8
+                    possui.AddRange(new List<Possui>
+                    {
+                        new Possui { IdPasso = 7, IdTrotinete = newScooter.IdTrotinete },
+                        new Possui { IdPasso = 8, IdTrotinete = newScooter.IdTrotinete }
+                    });
+                }
+
+                // Adiciona os passos relacionados à trotinete
+                _context.Possui.AddRange(possui);
+                await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
