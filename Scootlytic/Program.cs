@@ -9,8 +9,12 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
+// Registrar o serviço de background (MontagemBackgroundService)
+builder.Services.AddHostedService<MontagemBackgroundService>(); 
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
