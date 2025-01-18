@@ -173,7 +173,81 @@ namespace Scootlytic.Cart
             foreach (var trotinete in trotinetesNoCarrinho)
             {
                 trotinete.NumeroEncomenda = novaEncomenda.Numero;
+            
+                // Determinar os passos e peças necessárias
+                var passosNecessarios = trotinete.Modelo switch
+                {
+                    "GLIDY Scooter" => new List<(int passo, string peca)>
+                    {
+                        (7, "Frames"),
+                        (8, "Wheels")
+                    },
+                    "SPEEDY Electric Scooter" => new List<(int passo, string peca)>
+                    {
+                        (1, "Frames"),
+                        (2, "Motors"),
+                        (3, "Batteries"),
+                        (4, "Control Screens"),
+                        (5, "Wheels"),
+                        (5, "Brakes"),
+                        (6, "Lights")
+                    },
+                    _ => new List<(int passo, string peca)>()
+                };
+            
+                foreach (var (idPasso, nomePeca) in passosNecessarios)
+                {
+                    // Determinar a quantidade necessária (2 para Lights/Wheels, 1 para o restante)
+                    int quantidadeNecessaria = (nomePeca == "Lights" || nomePeca == "Wheels") ? 2 : 1;
+            
+                    for (int i = 0; i < quantidadeNecessaria; i++)
+                    {
+                        // Procurar a primeira peça disponível com estado = 0
+                        var pecaDisponivel = _context.Pecas
+                            .FirstOrDefault(p => p.Nome == nomePeca && p.Estado == 0);
+            
+                        if (pecaDisponivel == null)
+                        {
+                            // Criar 10 novas peças se não houver disponíveis
+                            var novasPecas = Enumerable.Range(0, 10)
+                                .Select(_ => new Peca { Nome = nomePeca, Estado = 0 })
+                                .ToList();
+                            _context.Pecas.AddRange(novasPecas);
+                            _context.SaveChanges();
+            
+                            // Buscar novamente uma peça disponível
+                            pecaDisponivel = novasPecas.First();
+                        }
+            
+                        // Verificar se o registro já existe na tabela PassoPeca
+                        var existePassoPeca = _context.PassoPeca
+                            .AsNoTracking() // Evita rastreamento das entidades carregadas
+                            .Any(pp => pp.PassoId == idPasso && pp.PecaReferencia == pecaDisponivel.Referencia);
+            
+                        if (!existePassoPeca)
+                        {
+                            // Associar a peça ao passo se ainda não estiver associada
+                            var passoPeca = new PassoPeca
+                            {
+                                PassoId = idPasso,
+                                PecaReferencia = pecaDisponivel.Referencia
+                            };
+                            _context.PassoPeca.Add(passoPeca); // Adicionar a associação
+                        }
+            
+                        // Atualizar o estado da peça para 1 (utilizada)
+                        pecaDisponivel.Estado = 1;
+            
+                        // Anexar peça ao contexto, se necessário, para evitar duplicatas
+                        _context.Pecas.Attach(pecaDisponivel);
+                        _context.SaveChanges();
+                    }
+                }
             }
+            
+            // Salvar todas as alterações após o loop principal
+            _context.SaveChanges();
+
 
             // Remover as associações do carrinho na tabela Adicionada
             var itensAdicionados = _context.Adicionada

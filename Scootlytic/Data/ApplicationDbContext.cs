@@ -17,6 +17,7 @@ namespace Scootlytic.Data
         public DbSet<Peca> Pecas { get; set; }
         public DbSet<Passo> Passos { get; set; }
         public DbSet<Possui> Possui { get; set; }
+        public DbSet<PassoPeca> PassoPeca { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

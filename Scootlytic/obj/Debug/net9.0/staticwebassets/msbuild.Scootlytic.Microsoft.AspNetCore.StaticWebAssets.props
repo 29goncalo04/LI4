@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nxqftxf63u</Fingerprint>
-      <Integrity>Gwc0WCzb9VQB0UQ1rmptX6kfSf1HqElDM9sV1fGW7Cg=</Integrity>
+      <Fingerprint>mkhrsh5of3</Fingerprint>
+      <Integrity>tmEip711R7sxQlUXqtNx/KjdrPoSFQQ8wTkUykmfTO4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\stepsGlidy.css'))</OriginalItemSpec>
@@ -210,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qq9qfk0wnn</Fingerprint>
-      <Integrity>0vISNus+KUdQugPcO/YRy+AT8NDUtOEzvnm72Ata4nk=</Integrity>
+      <Fingerprint>tzf4b25gbi</Fingerprint>
+      <Integrity>+azUSyZde5dfpkzEnELEUObp6KHnUQwva1fcqKaoTiI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\stepsSpeedy.css'))</OriginalItemSpec>
@@ -894,8 +894,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>libugb8716</Fingerprint>
-      <Integrity>Mw4mJ6vpO87nkFqcaWdgJ6Dfufzb3p1ZQfIWUpMBwvg=</Integrity>
+      <Fingerprint>jwx5xjz2vm</Fingerprint>
+      <Integrity>49euZzH+FbkhLys0D16lT/zjSbNq3PMJdilsfeASYNI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\stepsGlidy.js'))</OriginalItemSpec>
@@ -912,8 +912,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ahkz9oskvq</Fingerprint>
-      <Integrity>bhuZOyk5PrkzLL1ecxrrR1WXFa7JAe+u6ekq8zP9gw4=</Integrity>
+      <Fingerprint>uo2amw3bhl</Fingerprint>
+      <Integrity>4o0BM0OByHLaGAC0jZlx3IUakhRHXsb5Lu76258un+U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\stepsSpeedy.js'))</OriginalItemSpec>
