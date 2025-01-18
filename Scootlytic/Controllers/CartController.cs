@@ -160,7 +160,7 @@ namespace Scootlytic.Cart
             // Criar uma nova encomenda associada ao usuário
             var novaEncomenda = new Encomenda
             {
-                DataEntrega = DateTime.UtcNow.AddDays(3), // Simulação de prazo de entrega
+                DataEntrega = DateTime.UtcNow, // Simulação de prazo de entrega
                 MetodoPagamento = metodoPagamento,
                 Condicao = 1, // Status de encomenda (1 = processando, por exemplo)
                 EmailUtilizador = userEmail

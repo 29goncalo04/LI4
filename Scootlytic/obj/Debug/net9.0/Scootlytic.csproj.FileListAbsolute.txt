@@ -496,9 +496,9 @@
 /home/goncalo/3_ano/LI4/Scootlytic/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
 /home/goncalo/3_ano/LI4/Scootlytic/bin/Debug/net9.0/System.Formats.Asn1.dll
 /home/goncalo/3_ano/LI4/Scootlytic/bin/Debug/net9.0/System.Text.Json.dll
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/q0uqojkblk-ryixkdtvqc.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/egmawwxkaw-8gxl8wo4de.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/236roav2nf-mkhrsh5of3.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/9fwjpkuqn5-tzf4b25gbi.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/mxno29g094-jwx5xjz2vm.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/vett1c3o6q-uo2amw3bhl.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/q0uqojkblk-s4x3yb2b5a.gz

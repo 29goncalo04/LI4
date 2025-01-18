@@ -63,7 +63,7 @@ namespace Scootlytic.Controllers
         public IActionResult GetUserOrders()
         {
             var userEmail = Request.Headers["User-Email"].ToString(); // Pega o e-mail do usuário autenticado
-    
+
             var encomendas = _context.Encomendas
                 .Where(e => e.EmailUtilizador == userEmail)
                 .Select(e => new
@@ -74,14 +74,19 @@ namespace Scootlytic.Controllers
                     e.Condicao,
                     Trotinetes = _context.Trotinetes
                         .Where(t => t.NumeroEncomenda == e.Numero)
-                        .GroupBy(t => t.Modelo)
-                        .Select(g => new { Modelo = g.Key, Quantidade = g.Count() })
+                        .Select(t => new 
+                        {
+                            t.IdTrotinete,    // Incluindo o ID da trotinete
+                            t.Modelo,         // Modelo da trotinete
+                            Quantidade = _context.Trotinetes.Count(tt => tt.Modelo == t.Modelo && tt.NumeroEncomenda == e.Numero) // Contando a quantidade por modelo
+                        })
                         .ToList()
                 })
                 .ToList();
-    
-            return Json(encomendas); // Agora só retorna JSON quando chamado via fetch()
+
+            return Json(encomendas); // Retorna o JSON com os detalhes das trotinetes
         }
+
 
 
         public async Task<IActionResult> Search(string query)
@@ -104,5 +109,56 @@ namespace Scootlytic.Controllers
         {
             return View();
         }
+
+        //int orderId;
+        //int.TryParse(numero, out orderId);
+
+
+
+        public async Task<IActionResult> GetOrderDetails(string numero)
+        {
+            int orderId;
+            int.TryParse(numero, out orderId);
+            // Buscando as trotinetes associadas à encomenda
+            var trotinetes = _context.Trotinetes
+                .Where(t => t.NumeroEncomenda == orderId)
+                .ToList();
+
+            if (!trotinetes.Any())
+            {
+                return NotFound();
+            }
+
+            // Lógica para calcular o passo atual de cada trotinete
+            var detalhesTrotinetes = new List<object>();
+
+            foreach (var trotinete in trotinetes)
+            {
+                var passoAtual = _context.Possui
+                    .Where(p => p.IdTrotinete == trotinete.IdTrotinete)
+                    .OrderBy(p => p.IdPasso) // Ordena pelo IdPasso (do menor para o maior)
+                    .Select(p => p.IdPasso) // Seleciona o IdPasso
+                    .FirstOrDefault(); // Retorna o menor valor ou 0 se não houver nenhum
+
+
+                Console.WriteLine("Trotinete: " + trotinete.IdTrotinete);
+                Console.WriteLine("     Passo: " + passoAtual);
+                // Adiciona os detalhes da trotinete e seu passo atual
+                detalhesTrotinetes.Add(new
+                {
+                    TrotineteId = trotinete.IdTrotinete, // ID da trotinete
+                    PassoAtual = passoAtual // Passo atual
+                });
+            }
+
+            // Retorna os detalhes da encomenda e as trotinetes com o passo atual como JSON
+            return Json(detalhesTrotinetes); // Resposta no formato JSON
+        }
+
+
+
+
+
+
     }
 }

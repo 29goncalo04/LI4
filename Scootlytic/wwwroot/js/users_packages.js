@@ -38,11 +38,27 @@ function formatDate(dateString) {
 }
 
 // Função para exibir as encomendas na página
-function displayOrders(orders) {
-    const ordersContainer = document.querySelector('#orders-container'); // Alterado para buscar pelo ID
+
+//const response = await fetch(`/Admin/GetOrderDetails?numero=${orderId}`);
+
+// Função para buscar os detalhes da ordem
+async function fetchOrderDetails(orderId) {
+    try {
+        const response = await fetch(`/Admin/GetOrderDetails?numero=${orderId}`);
+        const orderDetails = await response.json();  // Parseia a resposta JSON
+        console.log("Dados recebidos do backend:", orderDetails);  // Adicionando log
+        return orderDetails;
+    } catch (error) {
+        console.error("Erro ao buscar os detalhes da ordem:", error);
+        return [];
+    }
+}
+
+async function displayOrders(orders) {
+    const ordersContainer = document.querySelector('#orders-container');
 
     if (ordersContainer) {
-        orders.forEach(order => {
+        for (const order of orders) {
             const totalPrice = order.trotinetes.reduce((total, t) => {
                 if (t.modelo === 'SPEEDY Electric Scooter') {
                     return total + (79.99 * t.quantidade);
@@ -52,7 +68,6 @@ function displayOrders(orders) {
                 return total;
             }, 0);
 
-            // Criação do elemento da ordem
             const orderElement = document.createElement('div');
             orderElement.classList.add('order');
             orderElement.innerHTML = `
@@ -61,18 +76,16 @@ function displayOrders(orders) {
                         <div class="package">Package #${order.numero}</div>
                     </div>
                     <div class="price-box">
-                        <div class="price">Price:<br>${totalPrice.toFixed(2)}€</div> <!-- Preço total -->
+                        <div class="price">Price:<br>${totalPrice.toFixed(2)}€</div>
                     </div>
                     <div class="contents-box">
                         <div class="contents-title">Contents:</div>
                         <div class="contents">
-                            <!-- SPEEDY à esquerda -->
                             ${order.trotinetes.filter(t => t.modelo === 'SPEEDY Electric Scooter').map(t => `
                                 <div class="speedy">
                                     ${t.modelo} x${t.quantidade}
                                 </div>
                             `).join('')}
-                            <!-- GLIDY à direita -->
                             ${order.trotinetes.filter(t => t.modelo === 'GLIDY Scooter').map(t => `
                                 <div class="glidy">
                                     ${t.modelo} x${t.quantidade}
@@ -87,8 +100,7 @@ function displayOrders(orders) {
                         <div class="delivery">Delivery date:<br>${formatDate(order.dataEntrega)}</div>
                     </div>
                 </div>
-                
-                <!-- Detalhes da encomenda (Tabela com "Step Number") -->
+
                 <div class="order-details">
                     <table>
                         <thead>
@@ -98,23 +110,51 @@ function displayOrders(orders) {
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Para cada trotinete, criar uma linha na tabela -->
-                            ${order.trotinetes.map(t => `
-                                ${Array.from({ length: t.quantidade }).map(() => `
-                                    <tr>
-                                        <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
-                                        <td>-</td> <!-- Usando "-" em vez da quantidade -->
-                                    </tr>
-                                `).join('')}
-                            `).join('')}
+                            ${await Promise.all(order.trotinetes.map(async (t) => {
+                                console.log("Trotinete:", t);
+                                const orderDetails = await fetchOrderDetails(order.numero);
+                                
+                                console.log("Detalhes da ordem:", orderDetails);  // Adicionando log
+
+                                const trotineteDetails = orderDetails.find(d => d.trotineteId === t.idTrotinete);
+                                console.log(t.idTrotinete);
+                                
+                                if (!trotineteDetails) {
+                                    console.error(`Detalhes da trotinete não encontrados para o ID ${t.idTrotinete}`);
+                                }
+
+                                const passoAtual = trotineteDetails ? trotineteDetails.passoAtual : '-';
+                                //console.log(`PassoAtual para a trotinete ${t.idTrotinete}: ${passoAtual}`);
+                                if (passoAtual == 0){
+                                    return `
+                                        <tr>
+                                            <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
+                                            <td>-</td>
+                                        </tr>
+                                    `;
+                                }
+                                else{
+                                    return `
+                                        <tr>
+                                            <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
+                                            <td>${passoAtual}</td>
+                                        </tr>
+                                    `;
+                                }
+                            })).then(results => results.join(''))}
                         </tbody>
                     </table>
-                </div>        
+                </div>
             `;
             ordersContainer.appendChild(orderElement);
-        });
+        }
     }
 }
+
+
+
+
+
 
 function goToPage(model) {
     // Função para navegar para a página detalhada do modelo de trotinete
