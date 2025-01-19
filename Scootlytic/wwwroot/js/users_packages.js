@@ -46,10 +46,8 @@ async function fetchOrderDetails(orderId) {
     try {
         const response = await fetch(`/Admin/GetOrderDetails?numero=${orderId}`);
         const orderDetails = await response.json();  // Parseia a resposta JSON
-        console.log("Dados recebidos do backend:", orderDetails);  // Adicionando log
         return orderDetails;
     } catch (error) {
-        console.error("Erro ao buscar os detalhes da ordem:", error);
         return [];
     }
 }
@@ -67,6 +65,15 @@ async function displayOrders(orders) {
                 }
                 return total;
             }, 0);
+
+            // Verificar status do pacote
+            const stepNumbers = await Promise.all(order.trotinetes.map(async (t) => {
+                const orderDetails = await fetchOrderDetails(order.numero);
+                const trotineteDetails = orderDetails.find(d => d.trotineteId === t.idTrotinete);
+                return trotineteDetails ? trotineteDetails.passoAtual : '-';
+            }));
+
+            const packageStatus = stepNumbers.every(step => step === 0) ? '0' : order.condicao;
 
             const orderElement = document.createElement('div');
             orderElement.classList.add('order');
@@ -94,7 +101,7 @@ async function displayOrders(orders) {
                         </div>
                     </div>                       
                     <div class="status-box">
-                        <div class="status">Package status:<br>${order.condicao}</div>
+                        <div class="status">Package status:<br>${packageStatus}</div> <!-- Atualizado -->
                     </div>
                     <div class="delivery-box">
                         <div class="delivery">Delivery date:<br>${formatDate(order.dataEntrega)}</div>
@@ -111,20 +118,9 @@ async function displayOrders(orders) {
                         </thead>
                         <tbody>
                             ${await Promise.all(order.trotinetes.map(async (t) => {
-                                console.log("Trotinete:", t);
                                 const orderDetails = await fetchOrderDetails(order.numero);
-                                
-                                console.log("Detalhes da ordem:", orderDetails);  // Adicionando log
-
                                 const trotineteDetails = orderDetails.find(d => d.trotineteId === t.idTrotinete);
-                                console.log(t.idTrotinete);
-                                
-                                if (!trotineteDetails) {
-                                    console.error(`Detalhes da trotinete não encontrados para o ID ${t.idTrotinete}`);
-                                }
-
                                 const passoAtual = trotineteDetails ? trotineteDetails.passoAtual : '-';
-                                //console.log(`PassoAtual para a trotinete ${t.idTrotinete}: ${passoAtual}`);
                                 if (passoAtual == 0){
                                     return `
                                         <tr>
@@ -150,8 +146,6 @@ async function displayOrders(orders) {
         }
     }
 }
-
-
 
 
 

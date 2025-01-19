@@ -47,12 +47,22 @@ function formatDate(dateString) {
     return `${day}/${month}/${year}`;
 }
 
+async function fetchOrderDetails(orderId) {
+    try {
+        const response = await fetch(`/Admin/GetOrderDetails?numero=${orderId}`);
+        const orderDetails = await response.json();  // Parseia a resposta JSON
+        return orderDetails;
+    } catch (error) {
+        return [];
+    }
+}
+
 // Função para exibir as encomendas na página
-function displayOrders(orders) {
-    const ordersContainer = document.querySelector('#orders-container'); // Alterado para buscar pelo ID
+async function displayOrders(orders) {
+    const ordersContainer = document.querySelector('#orders-container');
 
     if (ordersContainer) {
-        orders.forEach(order => {
+        for (const order of orders) {
             const totalPrice = order.trotinetes.reduce((total, t) => {
                 if (t.modelo === 'SPEEDY Electric Scooter') {
                     return total + (79.99 * t.quantidade);
@@ -62,7 +72,15 @@ function displayOrders(orders) {
                 return total;
             }, 0);
 
-            // Criação do elemento da ordem
+            // Verificar status do pacote
+            const stepNumbers = await Promise.all(order.trotinetes.map(async (t) => {
+                const orderDetails = await fetchOrderDetails(order.numero);
+                const trotineteDetails = orderDetails.find(d => d.trotineteId === t.idTrotinete);
+                return trotineteDetails ? trotineteDetails.passoAtual : '-';
+            }));
+
+            const packageStatus = stepNumbers.every(step => step === 0) ? '0' : order.condicao;
+
             const orderElement = document.createElement('div');
             orderElement.classList.add('order');
             orderElement.innerHTML = `
@@ -71,18 +89,16 @@ function displayOrders(orders) {
                         <div class="package">Package #${order.numero}</div>
                     </div>
                     <div class="price-box">
-                        <div class="price">Price:<br>${totalPrice.toFixed(2)}€</div> <!-- Preço total -->
+                        <div class="price">Price:<br>${totalPrice.toFixed(2)}€</div>
                     </div>
                     <div class="contents-box">
                         <div class="contents-title">Contents:</div>
                         <div class="contents">
-                            <!-- SPEEDY à esquerda -->
                             ${order.trotinetes.filter(t => t.modelo === 'SPEEDY Electric Scooter').map(t => `
                                 <div class="speedy">
                                     ${t.modelo} x${t.quantidade}
                                 </div>
                             `).join('')}
-                            <!-- GLIDY à direita -->
                             ${order.trotinetes.filter(t => t.modelo === 'GLIDY Scooter').map(t => `
                                 <div class="glidy">
                                     ${t.modelo} x${t.quantidade}
@@ -91,14 +107,13 @@ function displayOrders(orders) {
                         </div>
                     </div>                       
                     <div class="status-box">
-                        <div class="status">Package status:<br>${order.condicao}</div>
+                        <div class="status">Package status:<br>${packageStatus}</div> <!-- Atualizado -->
                     </div>
                     <div class="delivery-box">
                         <div class="delivery">Delivery date:<br>${formatDate(order.dataEntrega)}</div>
                     </div>
                 </div>
-                
-                <!-- Detalhes da encomenda (Tabela com "Step Number") -->
+
                 <div class="order-details">
                     <table>
                         <thead>
@@ -108,23 +123,36 @@ function displayOrders(orders) {
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Para cada trotinete, criar uma linha na tabela -->
-                            ${order.trotinetes.map(t => `
-                                ${Array.from({ length: t.quantidade }).map(() => `
-                                    <tr>
-                                        <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
-                                        <td>-</td> <!-- Usando "-" em vez da quantidade -->
-                                    </tr>
-                                `).join('')}
-                            `).join('')}
+                            ${await Promise.all(order.trotinetes.map(async (t) => {
+                                const orderDetails = await fetchOrderDetails(order.numero);
+                                const trotineteDetails = orderDetails.find(d => d.trotineteId === t.idTrotinete);
+                                const passoAtual = trotineteDetails ? trotineteDetails.passoAtual : '-';
+                                if (passoAtual == 0){
+                                    return `
+                                        <tr>
+                                            <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
+                                            <td>-</td>
+                                        </tr>
+                                    `;
+                                }
+                                else{
+                                    return `
+                                        <tr>
+                                            <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
+                                            <td>${passoAtual}</td>
+                                        </tr>
+                                    `;
+                                }
+                            })).then(results => results.join(''))}
                         </tbody>
                     </table>
-                </div>        
+                </div>
             `;
             ordersContainer.appendChild(orderElement);
-        });
+        }
     }
 }
+
 
 
 // Chamar a função para carregar as encomendas assim que a página for carregada

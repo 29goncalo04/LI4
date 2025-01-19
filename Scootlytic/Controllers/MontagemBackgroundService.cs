@@ -58,6 +58,7 @@ public class MontagemBackgroundService : BackgroundService
                             .FirstOrDefault();
                         var passoPecaAssociadoWheel2 = context.PassoPeca
                             .Where(pp => pp.Peca.Nome == "Wheels")
+                            .OrderBy(pp => pp.PassoId)
                             .Skip(1)  // Pega a segunda wheel, caso exista
                             .FirstOrDefault();
 

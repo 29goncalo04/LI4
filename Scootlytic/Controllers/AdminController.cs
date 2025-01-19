@@ -140,25 +140,29 @@ namespace Scootlytic.Controllers
                     .Select(p => p.IdPasso) // Seleciona o IdPasso
                     .FirstOrDefault(); // Retorna o menor valor ou 0 se não houver nenhum
 
-
-                Console.WriteLine("Trotinete: " + trotinete.IdTrotinete);
-                Console.WriteLine("     Passo: " + passoAtual);
-                // Adiciona os detalhes da trotinete e seu passo atual
-                detalhesTrotinetes.Add(new
-                {
-                    TrotineteId = trotinete.IdTrotinete, // ID da trotinete
-                    PassoAtual = passoAtual // Passo atual
-                });
+                if (passoAtual != 0){
+                    var numeroPasso = _context.Passos
+                        .Where(p => p.idPasso == passoAtual)
+                        .Select(p => p.NumeroPasso)
+                        .FirstOrDefault();
+                    // Adiciona os detalhes da trotinete e seu passo atual
+                    detalhesTrotinetes.Add(new
+                    {
+                        TrotineteId = trotinete.IdTrotinete, // ID da trotinete
+                        PassoAtual = numeroPasso // Passo atual
+                    });
+                }
+                else{
+                    // Adiciona os detalhes da trotinete e seu passo atual
+                    detalhesTrotinetes.Add(new
+                    {
+                        TrotineteId = trotinete.IdTrotinete, // ID da trotinete
+                        PassoAtual = passoAtual // Passo atual
+                    });
+                }
             }
-
             // Retorna os detalhes da encomenda e as trotinetes com o passo atual como JSON
             return Json(detalhesTrotinetes); // Resposta no formato JSON
         }
-
-
-
-
-
-
     }
 }
