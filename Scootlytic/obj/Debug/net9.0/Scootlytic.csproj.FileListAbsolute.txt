@@ -381,7 +381,6 @@
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/fdn1939yci-6xkn7y8oel.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/pxjtqxdybc-7h0cj2fmwr.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/ppj4ia0ypk-cxuenbz53y.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/o6akur53n8-4f1jutmxja.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/cusenz6iq2-bqjiyaj88i.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/xvzh3pmsnc-c2jlpeoesf.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/9rhchrs9pi-erw9l3u2r3.gz
@@ -461,7 +460,6 @@
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/zjdb5pogn2-zqlvs3a1hh.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/8a21re9sma-a7lanwctqw.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/r0co1oggjs-pzy382pf4k.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/eddtffnhwu-i2p4gzfj11.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/8b8yfrv0mm-ird1qh7r0g.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/cfy23nv0nl-q4dto9had8.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/64aj41xa7m-04aaxz6t8a.gz
@@ -500,5 +498,7 @@
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/9fwjpkuqn5-tzf4b25gbi.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/mxno29g094-7qu6087tb0.gz
 /home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/vett1c3o6q-hmmqkdp0g1.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/q0uqojkblk-xfiu8l19ji.gz
-/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/xnhdr2xhot-5yzxxiwzdp.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/q0uqojkblk-ztldx5l50k.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/xnhdr2xhot-ywyuu54m4v.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/o6akur53n8-9wsw89mte6.gz
+/home/goncalo/3_ano/LI4/Scootlytic/obj/Debug/net9.0/compressed/eddtffnhwu-o0t93n00sc.gz

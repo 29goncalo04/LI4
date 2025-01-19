@@ -88,14 +88,16 @@ async function displayOrders(orders) {
                     <div class="contents-box">
                         <div class="contents-title">Contents:</div>
                         <div class="contents">
-                            ${order.trotinetes.filter(t => t.modelo === 'SPEEDY Electric Scooter').map(t => `
-                                <div class="speedy">
-                                    ${t.modelo} x${t.quantidade}
-                                </div>
-                            `).join('')}
-                            ${order.trotinetes.filter(t => t.modelo === 'GLIDY Scooter').map(t => `
-                                <div class="glidy">
-                                    ${t.modelo} x${t.quantidade}
+                            ${Object.entries(order.trotinetes.reduce((acc, t) => {
+                                if (acc[t.modelo]) {
+                                    acc[t.modelo] += t.quantidade;
+                                } else {
+                                    acc[t.modelo] = t.quantidade;
+                                }
+                                return acc;
+                            }, {})).map(([modelo, quantidade]) => `
+                                <div class="${modelo === 'SPEEDY Electric Scooter' ? 'speedy' : 'glidy'}">
+                                    ${modelo} x${quantidade}
                                 </div>
                             `).join('')}
                         </div>

@@ -20,9 +20,10 @@ document.querySelector("form").addEventListener("submit", async function(event) 
 
     if (response.ok) {
       // Se o registro for bem-sucedido, redireciona para a página de login
+      alert("Ao criar conta aceita que a aplicação guarde o seu email e a sua password");
       window.location.href = '/Account/Login'; // Substitua pelo caminho correto se necessário
     } else {
-      // Caso ocorra algum erro, exibe uma mensagem
+      // Caso ocorra algum erro, exibe a mensagem
       const result = await response.text();
       alert(result); // Exibe a mensagem de erro do servidor (por exemplo, falha no registro)
     }

@@ -56,34 +56,38 @@ namespace Scootlytic.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(string email, string password)
         {
+            // Verificar se o email já está registrado
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (existingUser != null)
+            {
+                // Retorna uma resposta de erro, em vez de Content
+                return BadRequest("Este email já está em uso. Por favor, escolha outro.");
+            }
+        
             if (password.Length < 9)
             {
                 // Se a senha for muito curta, retorna um erro
-                return Content("A senha precisa ter pelo menos 9 caracteres.");
+                return BadRequest("A senha precisa ter pelo menos 9 caracteres.");
             }
-
+        
             var newCarrinho = new Carrinho();
             _context.Carrinhos.Add(newCarrinho);
             await _context.SaveChangesAsync();
-
-            // Cria um novo objeto User com os dados recebidos do formulário
+        
+            // Criação do novo usuário
             var newUser = new User
             {
-                Email = email,  // Você pode usar outro campo se necessário
+                Email = email,
                 Password = password,
                 CartId = newCarrinho.IdCarrinho
             };
-
-            // Adiciona o novo utilizador na base de dados
+        
+            // Adicionar o novo usuário à base de dados
             _context.Users.Add(newUser);
-
             await _context.SaveChangesAsync();
         
-            // Lógica para criar o utilizador (substitua com a lógica de base de dados real)
-            ViewBag.SuccessMessage = "Registration successful! You can now log in.";
-            
             // Redireciona para a página de login após o sucesso
-            return RedirectToAction("Login");
+            return Ok("Registro bem-sucedido!");
         }
     }
 }

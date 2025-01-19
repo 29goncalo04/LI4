@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Scootlytic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c41138245ef6366898d42d27d72b81011c40eca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7bb40d5ffa6f969f752b75fc17ea33bb9c14ad3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Scootlytic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Scootlytic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

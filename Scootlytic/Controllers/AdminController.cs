@@ -78,7 +78,7 @@ namespace Scootlytic.Controllers
                         {
                             t.IdTrotinete,    // Incluindo o ID da trotinete
                             t.Modelo,         // Modelo da trotinete
-                            Quantidade = _context.Trotinetes.Count(tt => tt.Modelo == t.Modelo && tt.NumeroEncomenda == e.Numero) // Contando a quantidade por modelo
+                            Quantidade = 1 // Contando a quantidade por modelo
                         })
                         .ToList()
                 })

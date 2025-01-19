@@ -12,7 +12,7 @@ using Scootlytic.Data;
 namespace Scootlytic.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250119121904_InitialCreate")]
+    [Migration("20250119164909_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

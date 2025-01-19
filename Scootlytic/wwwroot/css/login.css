@@ -1,5 +1,5 @@
 body {
-  font-family: '', sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #E6F7FF;
   margin: 0;
   display: flex;
@@ -60,6 +60,17 @@ label {
 }
 
 input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="password"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0 20px 0;
