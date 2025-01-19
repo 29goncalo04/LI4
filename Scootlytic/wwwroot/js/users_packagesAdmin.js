@@ -94,18 +94,33 @@ async function displayOrders(orders) {
                     <div class="contents-box">
                         <div class="contents-title">Contents:</div>
                         <div class="contents">
-                            ${Object.entries(order.trotinetes.reduce((acc, t) => {
-                                if (acc[t.modelo]) {
-                                    acc[t.modelo] += t.quantidade;
-                                } else {
-                                    acc[t.modelo] = t.quantidade;
-                                }
-                                return acc;
-                            }, {})).map(([modelo, quantidade]) => `
-                                <div class="${modelo === 'SPEEDY Electric Scooter' ? 'speedy' : 'glidy'}">
-                                    ${modelo} x${quantidade}
-                                </div>
-                            `).join('')}
+                            <!-- Coluna para SPEEDY -->
+                            <div class="contents-left">
+                                ${Object.entries(order.trotinetes.reduce((acc, t) => {
+                                    if (t.modelo === 'SPEEDY Electric Scooter') {
+                                        acc[t.modelo] = (acc[t.modelo] || 0) + t.quantidade;
+                                    }
+                                    return acc;
+                                }, {})).map(([modelo, quantidade]) => `
+                                    <div class="speedy">
+                                        ${modelo} x${quantidade}
+                                    </div>
+                                `).join('')}
+                            </div>
+                            
+                            <!-- Coluna para GLIDY e outros -->
+                            <div class="contents-right">
+                                ${Object.entries(order.trotinetes.reduce((acc, t) => {
+                                    if (t.modelo !== 'SPEEDY Electric Scooter') {
+                                        acc[t.modelo] = (acc[t.modelo] || 0) + t.quantidade;
+                                    }
+                                    return acc;
+                                }, {})).map(([modelo, quantidade]) => `
+                                    <div class="glidy">
+                                        ${modelo} x${quantidade}
+                                    </div>
+                                `).join('')}
+                            </div>
                         </div>
                     </div>                       
                     <div class="status-box">

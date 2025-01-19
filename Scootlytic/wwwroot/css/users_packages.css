@@ -63,6 +63,7 @@ body {
     font-size: 20px;
 }
 
+
 .contents-title {
     font-size: 25px;
     font-weight: normal;
@@ -72,26 +73,22 @@ body {
 
 .contents {
     display: flex;
+    justify-content: space-between; /* Garante separação clara entre esquerda e direita */
     width: 100%;
     font-size: 25px;
-    align-items: center;
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 20px; /* Espaçamento entre as colunas */
 }
 
-.contents .speedy {
+.contents-left {
+    flex: 1; /* Coluna para os itens SPEEDY */
     text-align: left;
 }
 
-.contents .glidy {
+.contents-right {
+    flex: 1; /* Coluna para os itens GLIDY e outros */
     text-align: right;
-    margin-left: auto; /* Garante que GLIDY fique sempre à direita */
 }
-
-/* Esconde SPEEDY, mas mantém o espaço ocupado */
-.contents .hidden {
-    visibility: hidden;
-}
-
-
 
 .status-box {
     background-color: #D9D9D9;

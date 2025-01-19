@@ -140,7 +140,7 @@ function renderCartItems(items) {
                     if (data.newTotalPrice !== undefined) {
                         // Atualiza o preço total
                         const totalPriceElement = document.getElementById("total-price");
-                        totalPriceElement.textContent = data.newTotalPrice + "€";
+                        totalPriceElement.textContent = parseFloat(data.newTotalPrice).toFixed(2) + "€";
                     } else {
                         console.error("Erro ao remover item:", data.error);
                     }
