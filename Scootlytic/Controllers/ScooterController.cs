@@ -17,14 +17,20 @@ namespace Scootlytic.Scooter
         {
             return View();
         }
-        public IActionResult StepsSpeedy()
+        public IActionResult StepsSpeedy(int? step)
         {
+            // Passa o passo para a View
+            ViewBag.Step = step;
             return View();
         }
-        public IActionResult StepsGlidy()
+        
+        public IActionResult StepsGlidy(int? step)
         {
+            // Passa o passo para a View
+            ViewBag.Step = step;
             return View();
         }
+
 
         [HttpPost]
         public async Task<IActionResult> AddToCart([FromBody] ScooterInfo scooterInfo)

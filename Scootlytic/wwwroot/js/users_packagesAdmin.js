@@ -130,7 +130,7 @@ async function displayOrders(orders) {
                                 if (passoAtual == 0){
                                     return `
                                         <tr>
-                                            <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
+                                            <td onclick="goToPage('${t.modelo}', ${1})">${t.modelo}</td>
                                             <td>-</td>
                                         </tr>
                                     `;
@@ -138,7 +138,7 @@ async function displayOrders(orders) {
                                 else{
                                     return `
                                         <tr>
-                                            <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
+                                            <td onclick="goToPage('${t.modelo}', ${passoAtual})">${t.modelo}</td>
                                             <td>${passoAtual}</td>
                                         </tr>
                                     `;

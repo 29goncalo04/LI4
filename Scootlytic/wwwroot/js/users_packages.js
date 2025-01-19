@@ -124,7 +124,7 @@ async function displayOrders(orders) {
                                 if (passoAtual == 0){
                                     return `
                                         <tr>
-                                            <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
+                                            <td onclick="goToPage('${t.modelo}', ${1})">${t.modelo}</td>
                                             <td>-</td>
                                         </tr>
                                     `;
@@ -132,7 +132,7 @@ async function displayOrders(orders) {
                                 else{
                                     return `
                                         <tr>
-                                            <td onclick="goToPage('${t.modelo}')">${t.modelo}</td>
+                                            <td onclick="goToPage('${t.modelo}', ${passoAtual})">${t.modelo}</td>
                                             <td>${passoAtual}</td>
                                         </tr>
                                     `;
@@ -150,14 +150,21 @@ async function displayOrders(orders) {
 
 
 
-function goToPage(model) {
-    // Função para navegar para a página detalhada do modelo de trotinete
-    if(model === "SPEEDY Electric Scooter") window.location.href = "/Scooter/stepsSpeedy";  
-    else if (model === "GLIDY Scooter") window.location.href = "/Scooter/stepsGlidy";
-    else alert("page not found");
-    //window.location.href = "/Scooter/stepsSpeedy";
+function goToPage(model, step) {
+    let url;
+    if (model === "SPEEDY Electric Scooter") {
+        url = "/Scooter/stepsSpeedy";
+    } else if (model === "GLIDY Scooter") {
+        url = "/Scooter/stepsGlidy";
+    } else {
+        alert("Page not found");
+        return;
+    }
+    if (step !== '-') {
+        url += `?step=${step}`; // Adiciona o passo como parâmetro de query na URL
+    }   
+    window.location.href = url;
 }
-
 
 
 

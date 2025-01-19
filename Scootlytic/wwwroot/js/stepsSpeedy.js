@@ -54,48 +54,57 @@ const stepDetails = {
   }
 };
 
+// Verifica o parâmetro `step` na URL
+const urlParams = new URLSearchParams(window.location.search);
+const initialStep = urlParams.get('step') ? parseInt(urlParams.get('step')) : 1;
+
+// Função para atualizar o passo
+function updateStep(stepNumber) {
+  // Remove a classe 'active' de todos os steps
+  steps.forEach(s => s.classList.remove('active'));
+  
+  // Adiciona a classe 'active' ao step correspondente
+  const activeStep = document.querySelector(`.step[data-step="${stepNumber}"]`);
+  if (activeStep) {
+    activeStep.classList.add('active');
+  }
+
+  // Atualiza a imagem e as partes com base no passo
+  const details = stepDetails[stepNumber];
+  stepImage.src = details.image; // Atualiza a imagem
+  document.getElementById('step-number').textContent = stepNumber; // Atualiza o número do passo
+  document.getElementById('step-instruction').textContent = details.instruction; // Atualiza a instrução
+  
+  // Limpa as partes anteriores
+  stepParts.innerHTML = '';
+  
+  // Adiciona as partes associadas ao passo
+  details.parts.forEach(part => {
+    const partElement = document.createElement('div');
+    partElement.classList.add('part');
+    
+    partElement.innerHTML = `
+      <div class="image-large">
+        <img src="${part.img}" alt="${part.name}">
+      </div>
+      <div class="label">
+        <span class="part-number">${part.number}</span>
+        <span class="part-name">${part.name}</span>
+      </div>
+    `;
+    
+    stepParts.appendChild(partElement);
+  });
+}
+
+// Inicializa o passo com base na URL ou padrão
+updateStep(initialStep);
 
 // Adiciona um evento de clique para cada step
 steps.forEach(step => {
   step.addEventListener('click', () => {
-    // Remove a classe 'active' de todos os steps
-    steps.forEach(s => s.classList.remove('active'));
-    
-    // Adiciona a classe 'active' ao step clicado
-    step.classList.add('active');
-    
-    // Pega o número do passo
-    const stepNumber = step.getAttribute('data-step');
-    
-    // Atualiza a imagem e as partes com base no passo
-    const details = stepDetails[stepNumber];
-    stepImage.src = details.image; // Atualiza a imagem
-    document.getElementById('step-number').textContent = stepNumber; // Atualiza o número do passo
-    
-
-    // // Atualiza a instrução (isto tá a estragar o que tá à frentes)
-    document.getElementById('step-instruction').textContent = details.instruction;
-    
-    // Limpa as partes anteriores
-    stepParts.innerHTML = '';
-    
-    // Adiciona as partes associadas ao passo
-    details.parts.forEach(part => {
-      const partElement = document.createElement('div');
-      partElement.classList.add('part');
-      
-      partElement.innerHTML = `
-        <div class="image-large">
-          <img src="${part.img}" alt="${part.name}">
-        </div>
-        <div class="label">
-          <span class="part-number">${part.number}</span>
-          <span class="part-name">${part.name}</span>
-        </div>
-      `;
-      
-      stepParts.appendChild(partElement);
-    });
+    const stepNumber = parseInt(step.getAttribute('data-step'));
+    updateStep(stepNumber);
   });
 });
 
