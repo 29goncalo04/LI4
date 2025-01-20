@@ -7,7 +7,6 @@ namespace Scootlytic.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        // Definir as entidades (tabelas) que vão ser mapeadas
         public DbSet<User> Users { get; set; }
         public DbSet<Encomenda> Encomendas { get; set; }
         public DbSet<Carrinho> Carrinhos { get; set; }
@@ -25,10 +24,8 @@ namespace Scootlytic.Data
 
             modelBuilder.Entity<Trotinete>()
                 .Property(t => t.InformacaoTecnica)
-                .IsRequired(false); // Torna o campo opcional
+                .IsRequired(false);
 
-
-            // Relacionamento entre Encomenda e User
             modelBuilder.Entity<Encomenda>()
                 .HasOne(e => e.User)
                 .WithMany()
@@ -36,21 +33,17 @@ namespace Scootlytic.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<User>()
-                .HasOne(u => u.Carrinho) // O User tem um Carrinho
-                .WithOne(c => c.User) // O Carrinho tem um único User
-                .HasForeignKey<User>(u => u.CartId) // A chave estrangeira está no campo CartId do User
-                .OnDelete(DeleteBehavior.Restrict); // Não deletar o Carrinho quando o User for deletado
+                .HasOne(u => u.Carrinho)
+                .WithOne(c => c.User)
+                .HasForeignKey<User>(u => u.CartId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-
-
-            // Relacionamento entre Trotinete e Encomenda
             modelBuilder.Entity<Trotinete>()
                 .HasOne(t => t.Encomenda)
                 .WithMany()
                 .HasForeignKey(t => t.NumeroEncomenda)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            // Relacionamento entre Escolhe, User e Trotinete
             modelBuilder.Entity<Escolhe>()
                 .HasKey(e => new { e.EmailUtilizador, e.IdTrotinete });
 
@@ -66,7 +59,6 @@ namespace Scootlytic.Data
                 .HasForeignKey(e => e.IdTrotinete)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Relacionamento entre Adicionada, Carrinho e Trotinete
             modelBuilder.Entity<Adicionada>()
                 .HasKey(a => new { a.IdCarrinho, a.IdTrotinete });
 
@@ -82,23 +74,21 @@ namespace Scootlytic.Data
                 .HasForeignKey(a => a.IdTrotinete)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Relacionamento entre Passo e Peça
             modelBuilder.Entity<PassoPeca>()
-            .HasKey(pp => new { pp.PassoId, pp.PecaReferencia }); // Chave composta
+            .HasKey(pp => new { pp.PassoId, pp.PecaReferencia });
 
             modelBuilder.Entity<PassoPeca>()
                 .HasOne(pp => pp.Passo)
-                .WithMany() // Não precisa de uma coleção de PassoPeca no Passo
-                .HasForeignKey(pp => pp.PassoId); // Chave estrangeira para Passo
+                .WithMany()
+                .HasForeignKey(pp => pp.PassoId);
     
             modelBuilder.Entity<PassoPeca>()
                 .HasOne(pp => pp.Peca)
-                .WithMany() // Não precisa de uma coleção de PassoPeca na Peca
+                .WithMany()
                 .HasForeignKey(pp => pp.PecaReferencia);
 
-            // Relacionamento entre Possui, Trotinete e Passo
             modelBuilder.Entity<Possui>()
-                .HasKey(p => new { p.IdTrotinete, p.IdPasso }); // Chave composta
+                .HasKey(p => new { p.IdTrotinete, p.IdPasso });
 
             modelBuilder.Entity<Possui>()
                 .HasOne(p => p.Trotinete)

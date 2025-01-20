@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Scootlytic.Data;  // Adiciona o namespace da sua aplicação
-using Scootlytic.Models; // Adiciona o namespace do seu modelo User
+using Scootlytic.Data;
+using Scootlytic.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Linq; // Para utilizar LINQ
+using System.Linq;
 
 public class MontagemBackgroundService : BackgroundService
 {
@@ -20,28 +20,22 @@ public class MontagemBackgroundService : BackgroundService
         using (var scope = _serviceProvider.CreateScope())
         {
             var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-
-            // Passo 1: Buscar os registros na tabela "Possui", ordenados por IdTrotinete
             var trotinetesEmMontagem = context.Possui
-                .OrderBy(p => p.IdTrotinete) // Ordenar por IdTrotinete
+                .OrderBy(p => p.IdTrotinete)
                 .ThenBy(p => p.IdPasso)
                 .ToList();
 
             foreach (var trotinete in trotinetesEmMontagem)
             {
-                // Passo 3: Buscar as associações na tabela "PassoPeca", ordenadas por PassoId
                 var pecasAssociadas = context.PassoPeca
                     .Include(pp => pp.Peca)
                     .Where(pp => pp.PassoId == trotinete.IdPasso && pp.Peca.Estado == 1)
                     .OrderBy(pp => pp.PassoId)
                     .ThenBy(pp => pp.PecaReferencia)
-                    .ToList(); // Pega o primeiro item ou null, caso não haja nenhum
-
-                // Simula o tempo de montagem com um delay aleatório entre 10 e 30 segundos
+                    .ToList();
                 var delay = new Random().Next(10000, 30000);
-                await Task.Delay(delay, stoppingToken); // Simulação do tempo de montagem
+                await Task.Delay(delay, stoppingToken);
 
-                // Caso seja o passo 5, buscamos um "brake" e duas "wheels" para remover as linhas específicas
                 if (trotinete.IdPasso == 5)
                 {
                     var brakes = pecasAssociadas.Where(pp => pp.Peca.Nome == "Brakes").ToList();
@@ -49,7 +43,6 @@ public class MontagemBackgroundService : BackgroundService
 
                     if (brakes.Count >= 1 && wheels.Count >= 2)
                     {
-                        // Remover as linhas específicas da tabela PassoPeca
                         var passoPecaAssociadoBrake = context.PassoPeca
                             .Where(pp => pp.Peca.Nome == "Brakes")
                             .FirstOrDefault();
@@ -59,10 +52,8 @@ public class MontagemBackgroundService : BackgroundService
                         var passoPecaAssociadoWheel2 = context.PassoPeca
                             .Where(pp => pp.Peca.Nome == "Wheels")
                             .OrderBy(pp => pp.PassoId)
-                            .Skip(1)  // Pega a segunda wheel, caso exista
+                            .Skip(1)
                             .FirstOrDefault();
-
-                        // Remover as peças associadas
                         if (passoPecaAssociadoBrake != null)
                         {
                             context.PassoPeca.Remove(passoPecaAssociadoBrake);
@@ -78,7 +69,6 @@ public class MontagemBackgroundService : BackgroundService
                     }
                 }
 
-                // Caso seja o passo 6, buscamos "Lights" para remover as linhas específicas
                 if (trotinete.IdPasso == 6)
                 {
                     var lights = pecasAssociadas.Where(pp => pp.Peca.Nome == "Lights").ToList();
@@ -89,15 +79,12 @@ public class MontagemBackgroundService : BackgroundService
                             .Where(pp => pp.Peca.Nome == "Lights" && pp.PassoId == trotinete.IdPasso)
                             .ToList();
                         
-                        // Remover as peças associadas
                         if (passoPecaAssociadoLights.Any())
                         {
                             context.PassoPeca.RemoveRange(passoPecaAssociadoLights);
                         }
                     }
                 }
-
-                // Caso seja o passo 8, buscamos "Wheels" para remover as linhas específicas
                 if (trotinete.IdPasso == 8)
                 {
                     var wheels = pecasAssociadas.Where(pp => pp.Peca.Nome == "Wheels").ToList();
@@ -107,27 +94,20 @@ public class MontagemBackgroundService : BackgroundService
                         var passoPecaAssociadoWheels = context.PassoPeca
                             .Where(pp => pp.Peca.Nome == "Wheels" && pp.PassoId == trotinete.IdPasso)
                             .ToList();
-                        
-                        // Remover as peças associadas
+
                         if (passoPecaAssociadoWheels.Any())
                         {
                             context.PassoPeca.RemoveRange(passoPecaAssociadoWheels);
                         }
                     }
                 }
-
-                // Remover a linha da tabela "Possui" e "PassoPeca" de forma geral
                 context.Possui.Remove(trotinete);
                 var passoPecaAssociadoGeral = context.PassoPeca
                     .Where(pp => pp.PassoId == trotinete.IdPasso);
                 context.PassoPeca.RemoveRange(passoPecaAssociadoGeral);
-
-                // Salvar as alterações no banco de dados
                 await context.SaveChangesAsync(stoppingToken);
             }
         }
-
-        // Pequeno delay para evitar sobrecarga na consulta ao banco
         await Task.Delay(100, stoppingToken);
     }
 }
@@ -136,16 +116,10 @@ public class MontagemBackgroundService : BackgroundService
 
 private async Task RemoverTrotineteDepoisDelayAsync(Possui trotinete, ApplicationDbContext context, CancellationToken stoppingToken)
 {
-    // Simula o tempo de montagem com um delay aleatório entre 10 e 30 segundos
-    var delay = new Random().Next(10000, 30000); // Tempo aleatório entre 10 e 30 segundos
-    await Task.Delay(delay, stoppingToken); // Simulação do tempo de montagem
-
-    // Remover da tabela "Possui"
+    var delay = new Random().Next(10000, 30000);
+    await Task.Delay(delay, stoppingToken);
     context.Possui.Remove(trotinete);
-
-    // Salvar as alterações após a remoção
-    await context.SaveChangesAsync(stoppingToken); // Salva a alteração no banco
+    await context.SaveChangesAsync(stoppingToken);
 }
-
 
 }

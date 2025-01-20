@@ -1,16 +1,13 @@
-// Seleciona os botões no cabeçalho
 const cartButton = document.querySelector('.cart-button');
 const backButton = document.querySelector('.back-button');
 const packagesButton = document.querySelector('.packages-button');
 
-// Evento para redirecionar ao clicar no carrinho
 if (cartButton) {
     cartButton.addEventListener('click', () => {
         window.location.href = '/Cart/Cart';
     });
 }
 
-// Evento para redirecionar ao clicar na seta de voltar
 if (backButton) {
     backButton.addEventListener('click', () => {
         window.location.href = '/Account/Login'; 
@@ -26,21 +23,16 @@ if (packagesButton) {
 document.querySelectorAll('.product-colors').forEach(group => {
     group.addEventListener('click', event => {
         if (event.target.classList.contains('color-box')) {
-            // Remove a seleção de todos os quadrados no grupo
             group.querySelectorAll('.color-box').forEach(box => box.classList.remove('selected'));
-            
-            // Adiciona a seleção ao quadrado clicado
             event.target.classList.add('selected');
         }
     });
 });
 
-// Função para mapear RGB para nomes de cores
 function rgbToColorName(rgb) {
     const colors = {
         "rgb(0, 0, 0)": "Black",
         "rgb(204, 204, 204)": "Grey",
-        // Adicione mais cores aqui, se necessário
     };
     return colors[rgb] || "Unknown Color";
 }
@@ -60,9 +52,8 @@ document.querySelectorAll('.details-button').forEach(button => {
         } else {
             const colorRgb = getComputedStyle(selectedColorBox).backgroundColor;
             const colorName = rgbToColorName(colorRgb);
-            // Aqui, alteramos para usar o roteamento ASP.NET
             const url = `/Scooter/Scooter?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&color=${encodeURIComponent(colorName)}&reference=${productReference}`;
-            window.location.href = url;  // Redirecionamento para o ASP.NET Controller
+            window.location.href = url;
         }
     });
 });

@@ -1,4 +1,3 @@
-// Função para carregar as encomendas do usuário
 async function loadOrders() {
     try {
         const response = await fetch('/Admin/GetUserOrders', {
@@ -9,14 +8,12 @@ async function loadOrders() {
             }
         });
 
-        // Verifique se a resposta é válida
         if (!response.ok) {
             throw new Error('Erro ao carregar as encomendas');
         }
 
         const data = await response.json();
 
-        // Verifique se os dados são válidos
         if (data && Array.isArray(data)) {
             displayOrders(data);
         } else {
@@ -32,20 +29,15 @@ async function loadOrders() {
 function formatDate(dateString) {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês começa em 0
+    const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
 }
 
-// Função para exibir as encomendas na página
-
-//const response = await fetch(`/Admin/GetOrderDetails?numero=${orderId}`);
-
-// Função para buscar os detalhes da ordem
 async function fetchOrderDetails(orderId) {
     try {
         const response = await fetch(`/Admin/GetOrderDetails?numero=${orderId}`);
-        const orderDetails = await response.json();  // Parseia a resposta JSON
+        const orderDetails = await response.json();
         return orderDetails;
     } catch (error) {
         return [];
@@ -66,7 +58,6 @@ async function displayOrders(orders) {
                 return total;
             }, 0);
 
-            // Verificar status do pacote
             const stepNumbers = await Promise.all(order.trotinetes.map(async (t) => {
                 const orderDetails = await fetchOrderDetails(order.numero);
                 const trotineteDetails = orderDetails.find(d => d.trotineteId === t.idTrotinete);
@@ -178,22 +169,15 @@ function goToPage(model, step) {
         return;
     }
     if (step !== '-') {
-        url += `?step=${step}`; // Adiciona o passo como parâmetro de query na URL
+        url += `?step=${step}`;
     }   
     window.location.href = url;
 }
 
 
-
-
-
-
-
-// Chamar a função para carregar as encomendas assim que a página for carregada
 document.addEventListener('DOMContentLoaded', loadOrders);
 
 
-// Função para voltar à página principal
 document.querySelector(".back-button").addEventListener("click", () => {
     window.location.href = "/Main/Main";
 });

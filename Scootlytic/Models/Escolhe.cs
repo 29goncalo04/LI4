@@ -5,11 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 public class Escolhe
 {
     [Key]
-    public string EmailUtilizador { get; set; } // Chave primária que aponta para o email do utilizador
+    public string EmailUtilizador { get; set; }
     [Key]
-    public int IdTrotinete { get; set; } // Chave primária que aponta para o modelo da trotinete
-    // Propriedade de navegação para User
+    public int IdTrotinete { get; set; }
     public User User { get; set; }
-    // Propriedade de navegação para Trotinete
     public Trotinete Trotinete { get; set; }
 }

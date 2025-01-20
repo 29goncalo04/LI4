@@ -21,11 +21,11 @@ body {
 }
 
 .back-button {
-    position: absolute; /* Torna o botão flutuante */
+    position: absolute;
     top: 40%;
-    right: 10px; /* Alinha à direita com espaçamento */
-    transform: translateY(-50%); /* Ajusta para ficar perfeitamente centralizado */
-    width: 40px; /* Tamanho do botão */
+    right: 10px;
+    transform: translateY(-50%);
+    width: 40px;
     height: 40px;
     cursor: pointer;
 }
@@ -47,60 +47,59 @@ body {
 .part:nth-child(1),
 .part:nth-child(2),
 .part:nth-child(3) {
-    grid-column: span 1; /* Garante que só ocupam 1 coluna */
+    grid-column: span 1;
 }
 
 .part:nth-child(4) {
-    grid-column: 1 / span 1; /* Inicia nova linha na 1ª coluna */
+    grid-column: 1 / span 1;
 }
 
 .part p {
-    font-size: 24px; /* Aumenta o tamanho do nome da peça */
+    font-size: 24px;
     margin: 5px 0;
 }
 
 .part span {
-    font-size: 20px; /* Aumenta o tamanho da quantidade */
+    font-size: 20px;
     background-color: #444;
     padding: 5px 50px;
 }
 
 .low-quantity {
-    color: red; /* Define o texto em vermelho para quantidades baixas */
+    color: red;
 }
 
-/* Ajustes de imagens individuais */
 .battery-img {
-    width: 160px; /* Tamanho específico para a bateria */
+    width: 160px;
     height: 160px;
 }
 
 .brakes-img {
-    width: 185px; /* Tamanho específico para os travões */
+    width: 185px;
     height: 165px;
 }
 
 .lights-img {
-    width: 160px; /* Tamanho específico para as luzes */
+    width: 160px;
     height: 160px;
 }
 
 .tires-img {
-    width: 210px; /* Tamanho específico para as rodas */
+    width: 210px;
     height: 210px;
 }
 
 .engine-img {
-    width: 146px; /* Tamanho específico para os motores */
+    width: 146px;
     height: 215px;
 }
 
 .control-screens-img {
-    width: 220px; /* Tamanho específico para os controladores */
+    width: 220px;
     height: 220px;
 }
 
 .frames-img {
-    width: 200px; /* Tamanho específico para os quadros */
+    width: 200px;
     height: 220px;
 }

@@ -6,9 +6,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 public class User
 {
     [Key]
-    public string Email { get; set; }  // Alterado para ser a chave primária
+    public string Email { get; set; }
     public string Password { get; set; }
-    public int? CartId { get; set; }  // Novo campo CartId
-
+    public int? CartId { get; set; }
     public Carrinho Carrinho { get; set; }
 }

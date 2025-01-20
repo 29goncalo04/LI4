@@ -99,7 +99,7 @@ body {
     color: black;
     font-size: 19px;
     margin-top: 30px;
-    min-height: 50px; /* Para garantir que a caixa aparece mesmo sem conteúdo */
+    min-height: 50px;
 }
 
 

@@ -6,11 +6,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 public class Adicionada
 {
     [Key]
-    public int IdCarrinho { get; set; } // Chave primária que aponta para o carrinho
+    public int IdCarrinho { get; set; }
     [Key]
-    public int IdTrotinete { get; set; } // Chave primária que aponta para o modelo da trotinete
-    // Propriedade de navegação para Carrinho
+    public int IdTrotinete { get; set; }
     public Carrinho Carrinho { get; set; }
-    // Propriedade de navegação para Trotinete
     public Trotinete Trotinete { get; set; }
 }

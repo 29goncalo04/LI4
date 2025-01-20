@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 public class Peca
 {
     [Key]
-    public int Referencia { get; set; } // Chave primária da peça
+    public int Referencia { get; set; }
     public string Nome {get; set;}
-    public byte Estado { get; set; } // Estado da peça, usando tinyint (0 a 255)
+    public byte Estado { get; set; }
 }

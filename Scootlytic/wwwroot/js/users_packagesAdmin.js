@@ -1,9 +1,7 @@
-// Função para carregar as encomendas do usuário
 async function loadOrders() {
     try {
-        const userEmail = sessionStorage.getItem('userEmail'); // Pega o email do usuário armazenado
+        const userEmail = sessionStorage.getItem('userEmail');
 
-        // Verifica se o email do usuário existe no sessionStorage
         if (!userEmail) {
             alert('Usuário não selecionado');
             return;
@@ -13,19 +11,17 @@ async function loadOrders() {
         const response = await fetch('/Admin/GetUserOrders', {
             method: 'GET',
             headers: {
-                'User-Email': userEmail,  // Passa o email do usuário como cabeçalho
+                'User-Email': userEmail,
                 'Content-Type': 'application/json'
             }
         });
 
-        // Verifique se a resposta é válida
         if (!response.ok) {
             throw new Error('Erro ao carregar as encomendas');
         }
 
         const data = await response.json();
 
-        // Verifique se os dados são válidos
         if (data && Array.isArray(data)) {
             displayOrders(data);
         } else {
@@ -42,7 +38,7 @@ async function loadOrders() {
 function formatDate(dateString) {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês começa em 0
+    const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
 }
@@ -50,14 +46,13 @@ function formatDate(dateString) {
 async function fetchOrderDetails(orderId) {
     try {
         const response = await fetch(`/Admin/GetOrderDetails?numero=${orderId}`);
-        const orderDetails = await response.json();  // Parseia a resposta JSON
+        const orderDetails = await response.json();
         return orderDetails;
     } catch (error) {
         return [];
     }
 }
 
-// Função para exibir as encomendas na página
 async function displayOrders(orders) {
     const ordersContainer = document.querySelector('#orders-container');
 
@@ -72,7 +67,6 @@ async function displayOrders(orders) {
                 return total;
             }, 0);
 
-            // Verificar status do pacote
             const stepNumbers = await Promise.all(order.trotinetes.map(async (t) => {
                 const orderDetails = await fetchOrderDetails(order.numero);
                 const trotineteDetails = orderDetails.find(d => d.trotineteId === t.idTrotinete);
@@ -171,12 +165,9 @@ async function displayOrders(orders) {
 }
 
 
-
-// Chamar a função para carregar as encomendas assim que a página for carregada
 document.addEventListener('DOMContentLoaded', loadOrders);
 
 
-// Função para voltar à página principal
 document.querySelector(".back-button").addEventListener("click", () => {
     window.location.href = "/Admin/UsersList";
 });

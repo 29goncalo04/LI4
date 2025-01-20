@@ -1,5 +1,5 @@
 @{
-    Layout = null; // Defina um layout apropriado se necessário, por exemplo: "~/Views/Shared/_Layout.cshtml"
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -22,37 +22,37 @@
             <div class="part battery">
                 <img src="/images/battery.png" alt="Batteries" class="battery-img">
                 <p>Batteries</p>
-                <span class="@(Model["Batteries"] < 8 ? "low-quantity" : "")">@Model["Batteries"]</span> <!-- Exibe a quantidade de Batteries -->
+                <span class="@(Model["Batteries"] < 8 ? "low-quantity" : "")">@Model["Batteries"]</span>
             </div>
             <div class="part brakes">
                 <img src="/images/brakes.png" alt="Brakes" class="brakes-img">
                 <p>Brakes</p>
-                <span class="@(Model["Brakes"] < 8 ? "low-quantity" : "")">@Model["Brakes"]</span> <!-- Exibe a quantidade de Brakes -->
+                <span class="@(Model["Brakes"] < 8 ? "low-quantity" : "")">@Model["Brakes"]</span>
             </div>
             <div class="part lights">
                 <img src="/images/lights.png" alt="Lights" class="lights-img">
                 <p>Lights</p>
-                <span class="@(Model["Lights"] < 8 ? "low-quantity" : "")">@Model["Lights"]</span> <!-- Exibe a quantidade de Lights -->
+                <span class="@(Model["Lights"] < 8 ? "low-quantity" : "")">@Model["Lights"]</span>
             </div>
             <div class="part tires">
                 <img src="/images/tires.png" alt="Wheels" class="tires-img">
                 <p>Wheels</p>
-                <span class="@(Model["Wheels"] < 8 ? "low-quantity" : "")">@Model["Wheels"]</span> <!-- Exibe a quantidade de Wheels -->
+                <span class="@(Model["Wheels"] < 8 ? "low-quantity" : "")">@Model["Wheels"]</span>
             </div>
             <div class="part engine">
                 <img src="/images/engine.png" alt="Motors" class="engine-img">
                 <p>Motors</p>
-                <span class="@(Model["Motors"] < 8 ? "low-quantity" : "")">@Model["Motors"]</span> <!-- Exibe a quantidade de Motors -->
+                <span class="@(Model["Motors"] < 8 ? "low-quantity" : "")">@Model["Motors"]</span>
             </div>
             <div class="part control-screens">
                 <img src="/images/controlScreens.png" alt="Control Screens" class="control-screens-img">
                 <p>Control Screens</p>
-                <span class="@(Model["Control Screens"] < 8 ? "low-quantity" : "")">@Model["Control Screens"]</span> <!-- Exibe a quantidade de Control Screens -->
+                <span class="@(Model["Control Screens"] < 8 ? "low-quantity" : "")">@Model["Control Screens"]</span>
             </div>
             <div class="part frames">
                 <img src="/images/frames.png" alt="Frames" class="frames-img">
                 <p>Frames</p>
-                <span class="@(Model["Frames"] < 8 ? "low-quantity" : "")">@Model["Frames"]</span> <!-- Exibe a quantidade de Frames -->
+                <span class="@(Model["Frames"] < 8 ? "low-quantity" : "")">@Model["Frames"]</span>
             </div>
         </div>        
     </div>

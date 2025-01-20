@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Scootlytic.Data;  // Adiciona o namespace da sua aplicação
-using Scootlytic.Models; // Adiciona o namespace do seu modelo User
+using Scootlytic.Data;
+using Scootlytic.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Linq; // Para utilizar LINQ
+using System.Linq;
 
 namespace Scootlytic.Scooter
 {
@@ -19,14 +19,12 @@ namespace Scootlytic.Scooter
         }
         public IActionResult StepsSpeedy(int? step)
         {
-            // Passa o passo para a View
             ViewBag.Step = step;
             return View();
         }
         
         public IActionResult StepsGlidy(int? step)
         {
-            // Passa o passo para a View
             ViewBag.Step = step;
             return View();
         }
@@ -39,11 +37,7 @@ namespace Scootlytic.Scooter
             {
                 return Json(new { success = false, message = "Informações inválidas." });
             }
-
-
             var userEmail = Request.Headers["User-Email"].ToString();
-
-            // Obtém o utilizador atual (supondo que o email do utilizador está armazenado na sessão)
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == userEmail);
 
@@ -60,7 +54,6 @@ namespace Scootlytic.Scooter
             _context.Carrinhos.Update(cart);
             await _context.SaveChangesAsync();
 
-            // Criar a nova trotinete
             var newScooter = new Trotinete
             {
                 Modelo = scooterInfo.Name,
@@ -75,7 +68,6 @@ namespace Scootlytic.Scooter
     
                 if (newScooter.Modelo == "SPEEDY Electric Scooter")
                 {
-                    // Para o modelo SPEEDY, inserimos os IDs de passos 1, 2, 3, 4, 5, 6
                     possui.AddRange(new List<Possui>
                     {
                         new Possui { IdPasso = 1, IdTrotinete = newScooter.IdTrotinete },
@@ -88,7 +80,6 @@ namespace Scootlytic.Scooter
                 }
                 else if (newScooter.Modelo == "GLIDY Scooter")
                 {
-                    // Para o modelo GLIDY, inserimos os IDs de passos 7 e 8
                     possui.AddRange(new List<Possui>
                     {
                         new Possui { IdPasso = 7, IdTrotinete = newScooter.IdTrotinete },
@@ -96,7 +87,6 @@ namespace Scootlytic.Scooter
                     });
                 }
 
-                // Adiciona os passos relacionados à trotinete
                 _context.Possui.AddRange(possui);
                 await _context.SaveChangesAsync();
             }
@@ -105,7 +95,6 @@ namespace Scootlytic.Scooter
                 return Json(new { success = false, message = "Erro ao salvar a trotinete: " + ex.Message });
             }
 
-            // Criar a entrada na tabela 'Adicionada'
             var addedItem = new Adicionada
             {
                 IdCarrinho = cart.IdCarrinho,
@@ -130,7 +119,7 @@ namespace Scootlytic.Scooter
 
 public class ScooterInfo
 {
-    public string Name { get; set; }        // Nome do modelo da trotinete
-    public string Color { get; set; }       // Cor da trotinete
+    public string Name { get; set; }
+    public string Color { get; set; }
     public decimal Price {get; set; }
 }

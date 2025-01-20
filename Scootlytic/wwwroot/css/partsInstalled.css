@@ -6,28 +6,26 @@ body {
     text-align: center;
 }
 
-/* Cabeçalho azul */
 .header {
     background-color: #E1F4FA;
     padding: 30px 20px;
-    text-align: left; /* Alinha o título à esquerda */
+    text-align: left;
 }
 
-/* Estilo do título dentro do cabeçalho */
 .header .title {
     font-size: 30px;
     font-weight: bold;
-    color: black; /* Torna o texto branco */
+    color: black;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .back-button {
-    position: absolute; /* Torna o botão flutuante */
+    position: absolute;
     top: 5%;
-    right: 10px; /* Alinha à direita com espaçamento */
-    transform: translateY(-50%); /* Ajusta para ficar perfeitamente centralizado */
-    width: 40px; /* Tamanho do botão */
+    right: 10px;
+    transform: translateY(-50%);
+    width: 40px;
     height: 40px;
     cursor: pointer;
 }

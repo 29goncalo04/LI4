@@ -7,16 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (userEmail) {
         fetch('/Cart/GetCartItems', {
-            method: 'GET',  // Requisição GET
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'User-Email': userEmail  // Envia o email no cabeçalho
+                'User-Email': userEmail
             }
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                renderCartItems(data.items);  // Preenche a página com os itens
+                renderCartItems(data.items);
             }
         })
         .catch(error => {
@@ -46,25 +46,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Função para renderizar os itens do carrinho na página
 function renderCartItems(items) {
     const cartContainer = document.getElementById("cart-items-container");
     let total = 0;
-    const itemMap = {}; // Mapeamento para agrupar as trotinetes e somar as quantidades
+    const itemMap = {};
 
-    // Agrupar os itens por modelo
     items.forEach(item => {
         const modelo = item.trotinete.modelo;
         let preco = 0;
 
-        // Definir o preço de acordo com o modelo
         if (modelo === "SPEEDY Electric Scooter") {
             preco = 79.99;
         } else if (modelo === "GLIDY Scooter") {
             preco = 49.99;
         }
-
-        // Verificar se o modelo já existe no itemMap, caso contrário inicializar
         if (!itemMap[modelo]) {
             itemMap[modelo] = {
                 modelo: modelo,
@@ -73,21 +68,16 @@ function renderCartItems(items) {
                 imagePath: modelo === "SPEEDY Electric Scooter" ? "/images/SpeedyScooter.png" : "/images/GlidyScooter.png"
             };
         }
-
-        // Incrementar a quantidade do modelo
         itemMap[modelo].quantidade++;
     });
-
-    // Criar e exibir os produtos no carrinho
     for (const modelo in itemMap) {
         const product = itemMap[modelo];
-        const totalPorProduto = product.preco * product.quantidade; // Calcular o preço total para cada modelo
+        const totalPorProduto = product.preco * product.quantidade;
 
         const productDiv = document.createElement("div");
         productDiv.classList.add("product");
-        productDiv.dataset.id = modelo; // Aqui você pode usar o modelo ou id
+        productDiv.dataset.id = modelo;
 
-        // Adicionar conteúdo ao div do produto
         productDiv.innerHTML = `
             <img class="scooter" src="${product.imagePath}" alt="${product.modelo}">
             <div class="details">
@@ -102,15 +92,9 @@ function renderCartItems(items) {
             </div>
             <img class="trash-icon" src="/images/lixo.png" alt="Remover">
         `;
-
-        // Adicionar o produto ao container
         cartContainer.appendChild(productDiv);
-
-        // Atualizar o total
         total += totalPorProduto;
     }
-
-    // Exibir o total
     const totalDiv = document.getElementById("total-price");
     if (totalDiv) {
         totalDiv.textContent = `TOTAL: ${total}€`;
@@ -124,21 +108,16 @@ function renderCartItems(items) {
             const trotineteId = productElement.getAttribute("data-id");
     
             if (productElement && trotineteId) {
-                // Remove visualmente o elemento da página
                 productElement.remove();
-    
-                // Atualiza o servidor usando GET, já que a API agora usa GET
-                fetch(`/Cart/RemoveFromCart?modelo=${trotineteId}`, {
-                    method: "GET", // Alterado para GET
+                    fetch(`/Cart/RemoveFromCart?modelo=${trotineteId}`, {
+                    method: "GET",
                     headers: {
                         'User-Email': sessionStorage.getItem("userEmail")
                     }
                 })
                 .then(response => response.json())
                 .then(data => {
-                    // Verifica se a resposta foi bem-sucedida
                     if (data.newTotalPrice !== undefined) {
-                        // Atualiza o preço total
                         const totalPriceElement = document.getElementById("total-price");
                         totalPriceElement.textContent = parseFloat(data.newTotalPrice).toFixed(2) + "€";
                     } else {

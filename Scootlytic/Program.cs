@@ -4,34 +4,27 @@ using Scootlytic.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar a string de conexão com a base de dados (Azure ou local)
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-// Registrar o serviço de background (MontagemBackgroundService)
 builder.Services.AddHostedService<MontagemBackgroundService>(); 
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 
 var app = builder.Build();
 
-// Aplicar migrações automaticamente ao iniciar a aplicação, caso esteja em desenvolvimento
 if (app.Environment.IsDevelopment())
 {
     using (var scope = app.Services.CreateScope())
     {
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
-        // Aplica automaticamente as migrações pendentes
         context.Database.Migrate();
 
-        // Verifique se a tabela Passos está vazia
         if (!context.Passos.Any())
         {
-            // Se não houver nenhum registro na tabela Passo, execute o seeding
             var passos = new List<Passo>
             {
                 new Passo { NumeroPasso = 1 },
@@ -86,7 +79,6 @@ if (app.Environment.IsDevelopment())
     }
 }
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -96,7 +88,6 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
-// Serve arquivos estáticos (CSS, JS, imagens) da pasta wwwroot
 app.UseStaticFiles();
 
 app.UseAuthorization();

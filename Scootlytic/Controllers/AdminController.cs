@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Scootlytic.Data;  // Adiciona o namespace da sua aplicação
-using Scootlytic.Models; // Adiciona o namespace do seu modelo User
+using Scootlytic.Data;
+using Scootlytic.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Linq; // Para utilizar LINQ
+using System.Linq;
 
 
 namespace Scootlytic.Controllers
@@ -16,21 +16,16 @@ namespace Scootlytic.Controllers
         {
             _context = context;
         }
-        // Action que renderiza a página principal do Admin
         public IActionResult Admin()
         {
             return View();
         }
-
-        // Action para renderizar a página de peças
         public async Task<IActionResult> Parts()
         {
-            // Nomes de todas as peças esperadas
             var pecasTodosNomes = new[] { "Batteries", "Brakes", "Lights", "Wheels", "Motors", "Control Screens", "Frames" };
-        
-            // Agrupa as peças com Estado == 0 e conta a quantidade de cada tipo
+
             var pecasQuantidades = await _context.Pecas
-                .Where(p => p.Estado == 0) // Filtra para considerar apenas as peças com Estado 0
+                .Where(p => p.Estado == 0)
                 .GroupBy(p => p.Nome)
                 .Select(g => new
                 {
@@ -39,7 +34,6 @@ namespace Scootlytic.Controllers
                 })
                 .ToListAsync();
         
-            // Cria um dicionário para armazenar a quantidade de cada peça, preenchendo 0 para as peças ausentes
             var pecasQuantidadeDict = pecasTodosNomes
                 .ToDictionary(
                     nome => nome, 
@@ -56,13 +50,13 @@ namespace Scootlytic.Controllers
 
         public IActionResult UsersPackages()
         {
-            return View();  // Agora carrega a View `userspackages.cshtml`
+            return View();
         }
 
         [HttpGet]
         public IActionResult GetUserOrders()
         {
-            var userEmail = Request.Headers["User-Email"].ToString(); // Pega o e-mail do usuário autenticado
+            var userEmail = Request.Headers["User-Email"].ToString();
 
             var encomendas = _context.Encomendas
                 .Where(e => e.EmailUtilizador == userEmail)
@@ -76,17 +70,16 @@ namespace Scootlytic.Controllers
                         .Where(t => t.NumeroEncomenda == e.Numero)
                         .Select(t => new 
                         {
-                            t.IdTrotinete,    // Incluindo o ID da trotinete
-                            t.Modelo,         // Modelo da trotinete
-                            Quantidade = 1 // Contando a quantidade por modelo
+                            t.IdTrotinete,
+                            t.Modelo,
+                            Quantidade = 1
                         })
                         .ToList()
                 })
                 .ToList();
 
-            return Json(encomendas); // Retorna o JSON com os detalhes das trotinetes
+            return Json(encomendas);
         }
-
 
 
         public async Task<IActionResult> Search(string query)
@@ -96,13 +89,12 @@ namespace Scootlytic.Controllers
                 return Json(new List<string>());
             }
         
-            // Buscar os utilizadores que começam com o texto da pesquisa (ignorando maiúsculas/minúsculas)
             var users = await _context.Users
                 .Where(u => u.Email.StartsWith(query))
-                .Select(u => u.Email) // Apenas o email será retornado
+                .Select(u => u.Email)
                 .ToListAsync();
         
-            return Json(users); // Retorna os emails como um array JSON
+            return Json(users);
         }
 
         public IActionResult UsersPackagesAdmin()
@@ -110,16 +102,11 @@ namespace Scootlytic.Controllers
             return View();
         }
 
-        //int orderId;
-        //int.TryParse(numero, out orderId);
-
-
 
         public async Task<IActionResult> GetOrderDetails(string numero)
         {
             int orderId;
             int.TryParse(numero, out orderId);
-            // Buscando as trotinetes associadas à encomenda
             var trotinetes = _context.Trotinetes
                 .Where(t => t.NumeroEncomenda == orderId)
                 .ToList();
@@ -129,40 +116,36 @@ namespace Scootlytic.Controllers
                 return NotFound();
             }
 
-            // Lógica para calcular o passo atual de cada trotinete
             var detalhesTrotinetes = new List<object>();
 
             foreach (var trotinete in trotinetes)
             {
                 var passoAtual = _context.Possui
                     .Where(p => p.IdTrotinete == trotinete.IdTrotinete)
-                    .OrderBy(p => p.IdPasso) // Ordena pelo IdPasso (do menor para o maior)
-                    .Select(p => p.IdPasso) // Seleciona o IdPasso
-                    .FirstOrDefault(); // Retorna o menor valor ou 0 se não houver nenhum
+                    .OrderBy(p => p.IdPasso)
+                    .Select(p => p.IdPasso)
+                    .FirstOrDefault();
 
                 if (passoAtual != 0){
                     var numeroPasso = _context.Passos
                         .Where(p => p.idPasso == passoAtual)
                         .Select(p => p.NumeroPasso)
                         .FirstOrDefault();
-                    // Adiciona os detalhes da trotinete e seu passo atual
                     detalhesTrotinetes.Add(new
                     {
-                        TrotineteId = trotinete.IdTrotinete, // ID da trotinete
-                        PassoAtual = numeroPasso // Passo atual
+                        TrotineteId = trotinete.IdTrotinete,
+                        PassoAtual = numeroPasso
                     });
                 }
                 else{
-                    // Adiciona os detalhes da trotinete e seu passo atual
                     detalhesTrotinetes.Add(new
                     {
-                        TrotineteId = trotinete.IdTrotinete, // ID da trotinete
-                        PassoAtual = passoAtual // Passo atual
+                        TrotineteId = trotinete.IdTrotinete,
+                        PassoAtual = passoAtual
                     });
                 }
             }
-            // Retorna os detalhes da encomenda e as trotinetes com o passo atual como JSON
-            return Json(detalhesTrotinetes); // Resposta no formato JSON
+            return Json(detalhesTrotinetes);
         }
     }
 }
