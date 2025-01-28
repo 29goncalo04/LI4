@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vcGFydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/goncalo/3_ano/LI4/Scootlytic/Views/Admin/partsInstalled.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vcGFydHNJbnN0YWxsZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/goncalo/3_ano/LI4/Scootlytic/Views/Admin/UsersList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVXNlcnNMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -70,10 +74,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/goncalo/3_ano/LI4/Scootlytic/Views/Main/main.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFpbi9tYWluLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/goncalo/3_ano/LI4/Scootlytic/Views/Parts/partsInstalled.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFydHMvcGFydHNJbnN0YWxsZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/goncalo/3_ano/LI4/Scootlytic/Views/Scooter/scooter.cshtml]

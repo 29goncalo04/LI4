@@ -20,6 +20,13 @@ namespace Scootlytic.Controllers
         {
             return View();
         }
+
+        public IActionResult PartsInstalled()
+        {
+            return View();
+        }
+
+
         public async Task<IActionResult> Parts()
         {
             var pecasTodosNomes = new[] { "Batteries", "Brakes", "Lights", "Wheels", "Motors", "Control Screens", "Frames" };
